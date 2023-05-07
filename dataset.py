@@ -1,119 +1,240 @@
+from collections import namedtuple, Counter
+
+import matplotlib.pyplot as plt
 import numpy as np
 import torch
-from torch_geometric.datasets import WikiCS
-import torch_geometric.transforms as T
+import torch.nn.functional as F
+from dgl.data import TUDataset
 import dgl
-from dgl.data import CoraGraphDataset, CiteseerGraphDataset, PubmedGraphDataset
-from dgl.data import AmazonCoBuyComputerDataset, AmazonCoBuyPhotoDataset
-from dgl.data import CoauthorCSDataset, CoauthorPhysicsDataset, PPIDataset
-from dgl.transforms import RowFeatNormalizer
-from dgl.dataloading import GraphDataLoader
-from ogb.nodeproppred import DglNodePropPredDataset
-from sklearn.preprocessing import StandardScaler
+import networkx as nx
+import seaborn as sns
+from sklearn.preprocessing import OneHotEncoder
+def pyg2dgl(pyg_data):
+    # print(pyg_data.x)
+    # 将x转化为torch.float32
+    # print(pyg_data.x)
+    # print(pyg_data.edge_index)
+    # 转换节点特征
+    
+    node_feat = torch.Tensor(pyg_data.x.float())
+    # node_label = torch.Tensor(pyg_data.y.float())
+
+    # label = torch.Tensor(pyg_data.y)
+    # 转换边特征
+    # edge_feat = torch.Tensor(pyg_data.edge_attr)
+    # edge_feat = torch.ones(pyg_data.edge_index.shape[1], 1) # 无边特征时，初始化一个全1特征
+
+    # 空的DGL对象
+    g = dgl.DGLGraph()
+
+    # 添加节点
+    g.add_nodes(pyg_data.num_nodes)
+    # 添加边
+    src, dst = pyg_data.edge_index
+    g.add_edges(src, dst)
+    # 设置节点和边特征
+    g.ndata['feat'] = node_feat
+    # print(g)
+
+    # 持久化，获取的dgl_data和g是一样的
+    ## save_graphs('./data/dgl_data.bin', g)
+    ## print(type(g))
+    ## g_list, _ = dgl.load_graphs('./data/dgl_data.bin')
+    ## dgl_data = g_list[0]
+    ## print(type(dgl_data))
+    assert type(g) == dgl.DGLGraph
+    return g
+
+def sample_per_class(random_state, labels, num_examples_per_class, forbidden_indices=None):
+    num_samples = labels.shape[0]
+    num_classes = labels.max() + 1
+    sample_indices_per_class = {index: [] for index in range(num_classes)}
+
+    # get indices sorted by class
+    for class_index in range(num_classes):
+        for sample_index in range(num_samples):
+            if labels[sample_index] == class_index:
+                if forbidden_indices is None or sample_index not in forbidden_indices:
+                    sample_indices_per_class[class_index].append(sample_index)
+
+    # get specified number of indices for each class
+    return np.concatenate(
+        [random_state.choice(sample_indices_per_class[class_index], num_examples_per_class, replace=False)
+         for class_index in range(len(sample_indices_per_class))
+         ])
 
 
-def get_ppi(root, transform=None):
-    train_dataset = PPIDataset(mode='train', raw_dir=root)
-    val_dataset = PPIDataset(mode='valid', raw_dir=root)
-    test_dataset = PPIDataset(mode='test', raw_dir=root)
-    train_val_dataset = [i for i in train_dataset] + [i for i in val_dataset]
-    for idx, data in enumerate(train_val_dataset):
-        data.ndata['batch'] = torch.zeros(data.number_of_nodes()) + idx
-        data.ndata['batch'] = data.ndata['batch'].long()
+def get_train_val_test_split(random_state,
+                             labels,
+                             train_examples_per_class=None, val_examples_per_class=None,
+                             test_examples_per_class=None,
+                             train_size=None, val_size=None, test_size=None):
+    num_samples = labels.shape[0]
+    num_classes = labels.max() + 1
+    remaining_indices = list(range(num_samples))
 
-    g = list(GraphDataLoader(train_val_dataset, batch_size=22, shuffle=True))
+    if train_examples_per_class is not None:
+        train_indices = sample_per_class(
+            random_state, labels, train_examples_per_class)
+    else:
+        # select train examples with no respect to class distribution
+        train_indices = random_state.choice(
+            remaining_indices, train_size, replace=False)
 
-    return g, train_dataset, val_dataset, test_dataset
+    if val_examples_per_class is not None:
+        val_indices = sample_per_class(
+            random_state, labels, val_examples_per_class, forbidden_indices=train_indices)
+    else:
+        remaining_indices = np.setdiff1d(remaining_indices, train_indices)
+        val_indices = random_state.choice(
+            remaining_indices, val_size, replace=False)
+
+    forbidden_indices = np.concatenate((train_indices, val_indices))
+    if test_examples_per_class is not None:
+        test_indices = sample_per_class(random_state, labels, test_examples_per_class,
+                                        forbidden_indices=forbidden_indices)
+    elif test_size is not None:
+        remaining_indices = np.setdiff1d(remaining_indices, forbidden_indices)
+        test_indices = random_state.choice(
+            remaining_indices, test_size, replace=False)
+    else:
+        test_indices = np.setdiff1d(remaining_indices, forbidden_indices)
+
+    # assert that there are no duplicates in sets
+    assert len(set(train_indices)) == len(train_indices)
+    assert len(set(val_indices)) == len(val_indices)
+    assert len(set(test_indices)) == len(test_indices)
+    # assert sets are mutually exclusive
+    assert len(set(train_indices) - set(val_indices)
+               ) == len(set(train_indices))
+    assert len(set(train_indices) - set(test_indices)
+               ) == len(set(train_indices))
+    assert len(set(val_indices) - set(test_indices)) == len(set(val_indices))
+    if test_size is None and test_examples_per_class is None:
+        # all indices must be part of the split
+        assert len(np.concatenate(
+            (train_indices, val_indices, test_indices))) == num_samples
+
+    if train_examples_per_class is not None:
+        train_labels = labels[train_indices]
+        train_sum = np.sum(train_labels, axis=0)
+        # assert all classes have equal cardinality
+        assert np.unique(train_sum).size == 1
+
+    if val_examples_per_class is not None:
+        val_labels = labels[val_indices]
+        val_sum = np.sum(val_labels, axis=0)
+        # assert all classes have equal cardinality
+        assert np.unique(val_sum).size == 1
+
+    if test_examples_per_class is not None:
+        test_labels = labels[test_indices]
+        test_sum = np.sum(test_labels, axis=0)
+        # assert all classes have equal cardinality
+        assert np.unique(test_sum).size == 1
+
+    return train_indices, val_indices, test_indices
 
 
-def preprocess(graph):
-    feat = graph.ndata["feat"]
-    graph = dgl.to_bidirected(graph)
-    graph.ndata["feat"] = feat
+def train_test_split(labels, seed, train_examples_per_class=None, val_examples_per_class=None,
+                     test_examples_per_class=None, train_size=None, val_size=None, test_size=None):
+    random_state = np.random.RandomState(seed)
+    train_indices, val_indices, test_indices = get_train_val_test_split(
+        random_state, labels, train_examples_per_class, val_examples_per_class, test_examples_per_class, train_size,
+        val_size, test_size)
 
-    graph = graph.remove_self_loop()
-    graph.create_formats_()
-    return graph
+    # print('number of training: {}'.format(len(train_indices)))
+    # print('number of validation: {}'.format(len(val_indices)))
+    # print('number of testing: {}'.format(len(test_indices)))
+
+    train_mask = np.zeros((labels.shape[0], 1), dtype=int)
+    train_mask[train_indices, 0] = 1
+    train_mask = np.squeeze(train_mask, 1)
+    val_mask = np.zeros((labels.shape[0], 1), dtype=int)
+    val_mask[val_indices, 0] = 1
+    val_mask = np.squeeze(val_mask, 1)
+    test_mask = np.zeros((labels.shape[0], 1), dtype=int)
+    test_mask[test_indices, 0] = 1
+    test_mask = np.squeeze(test_mask, 1)
+    mask = {}
+    mask['train'] = train_mask
+    mask['val'] = val_mask
+    mask['test'] = test_mask
+    return mask
 
 
-def scale_feats(x):
-    scaler = StandardScaler()
-    feats = x.numpy()
-    scaler.fit(feats)
-    feats = torch.from_numpy(scaler.transform(feats)).float()
-    return feats
+def graph_show(graph, index):
+    sns.set_palette(sns.color_palette("pastel"))
+    g = nx.Graph(dgl.to_networkx(graph))
+    nx.draw(g, pos=nx.kamada_kawai_layout(g), node_color=graph.ndata["node_labels"].numpy(), node_size=200, width=3)
+    # nx.draw(g, pos=nx.spring_layout(g), node_color=graph.ndata["node_labels"].numpy(), node_size=50)
+    plt.savefig(f'./PROTEINS/{index}.png', dpi=800)
+    # plt.show()
+    plt.close()
 
 
-def load_data(name):
-    if name == 'Cora':
-        dataset = CoraGraphDataset(raw_dir='./')
-    elif name == 'CiteSeer':
-        dataset = CiteseerGraphDataset(raw_dir='./')
-    elif name == 'PubMed':
-        dataset = PubmedGraphDataset(raw_dir='./')
-    elif name == 'Com':
-        dataset = AmazonCoBuyComputerDataset(raw_dir='./')
-    elif name == 'Photo':
-        dataset = AmazonCoBuyPhotoDataset(raw_dir='./')
-    elif name == 'CS':
-        dataset = CoauthorCSDataset(raw_dir='./')
-    elif name == 'Phy':
-        dataset = CoauthorPhysicsDataset(raw_dir='./')
-    elif name == 'WikiCS':
-        dataset = WikiCS(root='./Wiki')
-        data = dataset[0]
-        graph = dgl.graph((data.edge_index[0], data.edge_index[1]))
-        graph.ndata['feat'] = data.x
-        graph.ndata['label'] = data.y
-        train_mask = data.train_mask
-        val_mask = data.val_mask
-        test_mask = data.test_mask
-        feat = data.x
-        label = data.y
-        graph = graph.add_self_loop()
-        return graph, feat, label, train_mask, val_mask, test_mask
-    elif name == 'ppi':
-        dataset, train_data, val_data, test_data = get_ppi('./', transform=RowFeatNormalizer())
-        return dataset, train_data, val_data, test_data
-    if name != 'arxiv':
-        graph = dataset[0]
-        feat = graph.ndata.pop('feat')
-        label = graph.ndata.pop('label')
-        co = ['Photo', 'Com', 'CS', 'Phy']
-        if name in co:
-            train_mask, val_mask, test_mask = None, None, None
+def load_graph_classification_dataset(dataset_name, deg4feat=False):
+    dataset_name = dataset_name.upper()
+    dataset = TUDataset(dataset_name)
+    graph, _ = dataset[0]
+
+    # if ("attr" not in graph.ndata) and ("node_attr" not in graph.ndata):
+    if "attr" not in graph.ndata:
+        if "node_labels" in graph.ndata and not deg4feat:
+            print("Use node label as node features")
+            feature_dim = 0
+            for g, _ in dataset:
+                feature_dim = max(feature_dim, g.ndata["node_labels"].max().item())
+
+            feature_dim += 1
+            # i = 0
+            for g, l in dataset:
+                node_label = g.ndata["node_labels"].view(-1)
+                # print(node_label)
+                # graph_show(g, i)
+                # i += 1
+                feat = F.one_hot(node_label, num_classes=feature_dim).float()
+                g.ndata["attr"] = feat
         else:
-            train_mask = graph.ndata.pop('train_mask')
-            val_mask = graph.ndata.pop('val_mask')
-            test_mask = graph.ndata.pop('test_mask')
-    elif name == 'arxiv':
-        graph, labels = dataset[0]
-        num_nodes = graph.num_nodes()
+            print("Using degree as node features")
+            feature_dim = 0
+            degrees = []
+            for g, _ in dataset:
+                feature_dim = max(feature_dim, g.in_degrees().max().item())
+                degrees.extend(g.in_degrees().tolist())
+            MAX_DEGREES = 400
 
-        split_idx = dataset.get_idx_split()
-        train_idx, val_idx, test_idx = split_idx["train"], split_idx["valid"], split_idx["test"]
-        graph = preprocess(graph)
+            oversize = 0
+            for d, n in Counter(degrees).items():
+                if d > MAX_DEGREES:
+                    oversize += n
+            # print(f"N > {MAX_DEGREES}, #NUM: {oversize}, ratio: {oversize/sum(degrees):.8f}")
+            feature_dim = min(feature_dim, MAX_DEGREES)
 
-        if not torch.is_tensor(train_idx):
-            train_idx = torch.as_tensor(train_idx)
-            val_idx = torch.as_tensor(val_idx)
-            test_idx = torch.as_tensor(test_idx)
+            feature_dim += 1
+            for g, l in dataset:
+                degrees = g.in_degrees()
+                degrees[degrees > MAX_DEGREES] = MAX_DEGREES
 
-        feat = graph.ndata["feat"]
-        feat = scale_feats(feat)
-        graph.ndata["feat"] = feat
+                feat = F.one_hot(degrees, num_classes=feature_dim).float()
+                g.ndata["attr"] = feat
+    else:
+        print("******** Use attr as node features ********")
+        # for g, l in dataset:
+        #     g.ndata['attr'] = g.ndata['node_attr'].float()
+        feature_dim = graph.ndata["attr"].shape[1]
 
-        train_mask = torch.full((num_nodes,), False).index_fill_(0, train_idx, True)
-        val_mask = torch.full((num_nodes,), False).index_fill_(0, val_idx, True)
-        test_mask = torch.full((num_nodes,), False).index_fill_(0, test_idx, True)
-        graph.ndata["label"] = labels.view(-1)
-        graph.ndata["train_mask"], graph.ndata["val_mask"], graph.ndata["test_mask"] = train_mask, val_mask, test_mask
-        label = labels.view(-1)
+    labels = torch.tensor([x[1] for x in dataset])
 
-    # train_idx = th.nonzero(train_mask, as_tuple=False).squeeze()
-    # val_idx = th.nonzero(val_mask, as_tuple=False).squeeze()
-    # test_idx = th.nonzero(test_mask, as_tuple=False).squeeze()
+    num_classes = torch.max(labels).item() + 1
+    dataset = [(g.remove_self_loop().add_self_loop(), y) for g, y in dataset]
+    Y = np.array([y.numpy()[0] for _, y in dataset])
+    # print(f"******** # Num Graphs: {len(dataset1)}, # Num Feat: {feature_dim}, # Num Classes: {num_classes} ********")
 
-    graph = graph.add_self_loop()
+    # mask = train_test_split(
+    #     Y, seed=np.random.randint(0, 35456, size=1), train_examples_per_class=400,
+    #     val_size=0, test_size=None)
+    # dataset1 = [(dataset[index]) for index, i in enumerate(mask['train'].astype(bool)) if i == True]
 
-    return graph, feat, label, train_mask, val_mask, test_mask
+    # return dataset, (feature_dim, num_classes), mask['train'].astype(bool), mask['test'].astype(bool)
+    return dataset, (feature_dim, num_classes)
