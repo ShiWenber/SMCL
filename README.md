@@ -3,7 +3,7 @@
 use the following command to create a conda environment from environment.yml file.
 
 ```bash
-conda create -f environment.yml
+conda env create -n <env_name> -f environment.yml
 ```
 
 ## A Simple Self-Supervised Graph Representation via Online Predict
