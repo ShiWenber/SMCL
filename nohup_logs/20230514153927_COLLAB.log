@@ -1,0 +1,4 @@
+seed: 1684081952
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=1, epochs=50, hidden=32, layer=2, lr=1e-05, out_hidden=64, rate=0.3, w=1e-05, warmup=100.0)
+Acc: 0.6754, Std: 0.008720091742636665
