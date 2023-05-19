@@ -65,17 +65,25 @@ def collate_fn(batch):
     return batch_g, labels
 
 # 用time 获得随机数种子
-seed = int(time.time())
+# seed = int(time.time())
+seed = int(33302)
 seed_everything(seed)
-print(f"seed: {seed}")
+# print(f"seed: {seed}")
 parser = argparse.ArgumentParser(description="GraphOP")
 # parser.add_argument("--dataname", type=str, default="ENZYMES")
 parser.add_argument("--dataname", type=str, default="MUTAG")
 parser.add_argument("--cuda", type=int, default=0)
 args = parser.add_argument("--depth", type=int, default=1)
+args = parser.add_argument("--rate", type=float, default=0.1)
+args = parser.add_argument("--ring_width", type=int, default=1)
+
 args = parser.parse_args()
 args = load_best_configs(args, "config.yaml")
 dataname = args.dataname
+
+# 环带宽度，取值范围为 1 ~ depth + 1
+assert args.ring_width <= args.depth + 1 and args.ring_width >= 1, "ring_width must be in [1, depth + 1]"
+
 
 graphs, (n_feat, num_classes) = load_graph_classification_dataset(dataname)
 train_idx = torch.arange(len(graphs))
@@ -90,13 +98,14 @@ device = torch.device(f'cuda:{args.cuda}' if torch.cuda.is_available() else 'cpu
 
 print(f"{args}")
 def train():
-    time_str = time.strftime("%Y_%m_%d-%H_%M_%S", time.localtime())
+    seed_everything(seed)
+    time_str = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
     log_file_name =  ''
     for k, v in args.__dict__.items():
-        log_file_name += f"{k}_{v}_"
+        log_file_name += f"{k}-{v}_"
     log_file_name = log_file_name[:-1]
-    file = open(f"logs/{time_str}-{log_file_name}.csv", "w")
-    model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth).to(device)
+    file = open(f"logs/{time_str}_{log_file_name}_seed-{seed}.csv", "w")
+    model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth, args.ring_width).to(device)
     optimizer = Adam(model.trainable_parameters(), lr=args.lr, weight_decay=args.w)
     lr_scheduler = CosineDecayScheduler(args.lr, args.warmup, args.epochs)
     mm_scheduler = CosineDecayScheduler(1 - 0.99, 0, args.epochs)
@@ -113,8 +122,8 @@ def train():
             g = g.to(device)
             loss = model(g, g.ndata["attr"])
             loss_tmp = loss.item()
-            print(f"Epoch: {epoch}, Loss: {loss_tmp}")
-            file.write(f"Epoch: {epoch}, Loss: {loss_tmp}\n")
+            # print(f"Epoch: {epoch}, Loss: {loss_tmp}")
+            file.write(f"{epoch},{loss_tmp}\n")
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -131,9 +140,9 @@ def train():
     x = np.concatenate(x_list, axis=0)
     y = np.concatenate(y_list, axis=0)
     test_f1, test_std = evaluate_graph_embeddings_using_svm(x, y)
-    print(args)
+    # print(args)
     print(f"Acc: {test_f1}, Std: {test_std}")
-    file.write(f"Acc: {test_f1}, Std: {test_std}\n")
+    file.write(f"{test_f1},{test_std}\n")
     file.close()
     # train_embs = torch.from_numpy(x)[idx_train].to(device)
     # test_embs = torch.from_numpy(x)[idx_test].to(device)

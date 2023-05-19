@@ -10,6 +10,7 @@ import copy
 import numpy as np
 import functools
 
+
 class CosineDecayScheduler:
     def __init__(self, max_val, warmup_steps, total_steps):
         self.max_val = max_val
@@ -45,64 +46,11 @@ def sce_loss(x, y, alpha=3):
 #     mask_nodes = perm[: num_mask_nodes]
 
 #     return mask_nodes
-
-# # 获取邻居节点
-# def get_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor):
-#     """获得一个中心点列表中所有中心点的邻居，不包括中心点本身，且去重
-
-#     Args:
-#         graph (dgl.DGLGraph): 图对象
-#         nodes (torch.Tensor): 中心节点张量，1*nodes_num
-
-#     Returns:
-#         torch.Tensor: 所有中心点的邻居节点组成的无重复节点张量, 1*neighbors_num
-#     """
-#     assert nodes.is_cuda == True
-#     # print(type(graph))
-#     adj_matrix = graph.adjacency_matrix()
-#     # 判断adj_matrix的是否在GPU上
-#     # print(adj_matrix.is_cuda)
-#     adj_matrix = adj_matrix.to(nodes.device)
-#     # adj_matrix = adj_matrix.to(nodes.device)
-#     # print(adj_matrix.device)
-#     assert adj_matrix.is_cuda == True
-
-#     # 获得这些节点的邻居
-#     neighbors = adj_matrix.index_select(0, nodes)
-#     # 压缩稀疏矩阵
-#     neighbors = neighbors.coalesce()
-#     # neighbors.indices()返回一个2*neighbors_num的矩阵，2 * neighbors_num，第二行是所有邻居节点标号的横向拼接
-#     unique_neighbors = torch.unique(neighbors.indices()[1])
-
-#     return unique_neighbors
-
-# # 多重递归获得邻居节点集
-# def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int):
-#     """多重递归获得邻居节点集合张量（逻辑上是集合，物理数据结构为torch.Tensor），且去重
-
-#     Args:
-#         graph (dgl.DGLGraph): 输入图
-#         nodes (torch.Tensor): 中心节点集合张量，1*nodes_num
-#         depth (int): 递归深度，为0时相当于点遮盖，直接返回nodes
-
-#     Returns:
-#         torch.Tensor: 所有中心点的邻居节点组成的无重复节点张量, 1*neighbors_num
-#     """
-#     if depth == 0:
-#         return nodes
-#     else:
-#         neighbors = get_neighbors(graph, nodes)
-#         return get_all_neighbors(graph, neighbors, depth-1)
-
-# 获取邻居节点
-@functools.lru_cache(maxsize=None)
 def get_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor):
     """获得一个中心点列表中所有中心点的邻居，不包括中心点本身，且去重
-
     Args:
         graph (dgl.DGLGraph): 图对象
         nodes (torch.Tensor): 中心节点张量，1*nodes_num
-
     Returns:
         torch.Tensor: 所有中心点的邻居节点组成的无重复节点张量, 1*neighbors_num
     """
@@ -125,16 +73,14 @@ def get_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor):
 
     return unique_neighbors
 
-# 多重递归获得邻居节点集
-@functools.lru_cache(maxsize=None)
+# 多重递归获得邻居节点
+@functools.lru_cache(maxsize=16)
 def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int):
     """多重递归获得邻居节点集合张量（逻辑上是集合，物理数据结构为torch.Tensor），且去重
-
     Args:
         graph (dgl.DGLGraph): 输入图
         nodes (torch.Tensor): 中心节点集合张量，1*nodes_num
         depth (int): 递归深度，为0时相当于点遮盖，直接返回nodes
-
     Returns:
         torch.Tensor: 所有中心点的邻居节点组成的无重复节点张量, 1*neighbors_num
     """
@@ -142,110 +88,50 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int):
         return nodes
     else:
         neighbors = get_neighbors(graph, nodes)
+        neighbors = torch.cat((neighbors, nodes), dim=0)
+        neighbors = torch.unique(neighbors)
         return get_all_neighbors(graph, neighbors, depth-1)
 
-# def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth=1):
-#     """遮盖子图，返回遮盖节点集合和中心节点集合
-
-#     Args:
-#         g (dgl.DGLGraph): 输入图
-#         x (torch.Tensor): 特征张量
-#         num (int): 随机遮盖的子图数量（中心点数量）
-#         depth (int, optional): 遮盖节点的邻居深度. Defaults to 1.
-
-#     Returns:
-#         torch.Tensor: mask_nodes, 遮盖节点集合
-#         torch.Tensor: central_nodes, 中心节点集合，可以去除，仅用在需要查看中心节点特征的情况下，猜测当gcn层数为3时，递归深度低于3就可能导致中心节点特征丢失 todo
-#     """
-#     num_nodes = g.num_nodes()
-#     perm = torch.randperm(num_nodes, device=x.device)
-#     central_nodes = perm[: num]
-#     # print(central_nodes.device)
-#     assert type(central_nodes) == torch.Tensor
-#     central_nodes = central_nodes.to(x.device)
-#     # print(nodes)
-#     assert central_nodes.is_cuda == True
-#     connected_nodes = get_all_neighbors(g, central_nodes, 1)
-#     assert type(connected_nodes) == torch.Tensor
-#     # 添加中心节点到集合中
-#     mask_nodes = torch.cat([central_nodes, connected_nodes])
-#     mask_nodes = torch.unique(mask_nodes)
-
-#     return mask_nodes, central_nodes
-
-# def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth=1):
-#     """遮盖子图，返回遮盖节点集合和中心节点集合
-
-#     Args:
-#         g (dgl.DGLGraph): 输入图
-#         x (torch.Tensor): 特征张量
-#         num (int): 随机遮盖的子图数量（中心点数量）
-#         depth (int, optional): 遮盖节点的邻居深度. Defaults to 1.
-
-#     Returns:
-#         torch.Tensor: mask_nodes, 遮盖节点集合 subgraph_num * subgraph_central_and_connected_nodes_num
-#         torch.Tensor: central_nodes, 中心节点集合，可以去除，仅用在需要查看中心节点特征的情况下，猜测当gcn层数为3时，递归深度低于3就可能导致中心节点特征丢失 todo
-#     """
-#     num_nodes = g.num_nodes()
-#     perm = torch.randperm(num_nodes, device=x.device)
-#     central_nodes = perm[: num]
-#     # print(central_nodes.device)
-#     assert type(central_nodes) == torch.Tensor
-#     central_nodes = central_nodes.to(x.device)
-#     # print(nodes)
-#     assert central_nodes.is_cuda == True
-#     mask_nodes_ls = []
-#     for i in range(central_nodes.shape[0]):
-#         connected_nodes = get_all_neighbors(g, central_nodes[i], depth)
-#         connected_nodes = torch.cat([central_nodes[i], connected_nodes])
-#         print(connected_nodes)
-#         mask_nodes_ls.append(connected_nodes)
-#     # assert type(connected_nodes) == torch.Tensor
-#     print(mask_nodes_ls)
-
-#     return mask_nodes_ls, central_nodes
 
 
-
-
-
-def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth=1):
+def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width):
     """遮盖子图，返回遮盖节点集合和中心节点集合
-
     Args:
         g (dgl.DGLGraph): 输入图
         x (torch.Tensor): 特征张量
         num (int): 随机遮盖的子图数量（中心点数量）
         depth (int, optional): 遮盖节点的邻居深度. Defaults to 1.
-
     Returns:
-        torch.Tensor: mask_nodes, 遮盖节点集合 subgraph_num * subgraph_central_and_connected_nodes_num
+        torch.Tensor: mask_nodes, 遮盖节点集合
         torch.Tensor: central_nodes, 中心节点集合，可以去除，仅用在需要查看中心节点特征的情况下，猜测当gcn层数为3时，递归深度低于3就可能导致中心节点特征丢失 todo
     """
+    assert 1 <= ring_width <= depth + 1, "ring_width must be in [1, depth + 1]"
     num_nodes = g.num_nodes()
     perm = torch.randperm(num_nodes, device=x.device)
     central_nodes = perm[: num]
-    # print("cent",central_nodes)
     # print(central_nodes.device)
-    central_nodes = central_nodes.to(x.device)
     assert type(central_nodes) == torch.Tensor
+    central_nodes = central_nodes.to(x.device)
     # print(nodes)
     assert central_nodes.is_cuda == True
-    mask_nodes_ls = []
-    for i in range(central_nodes.shape[0]):
-        connected_nodes = get_all_neighbors(g, central_nodes[i].unsqueeze(0), depth)
-        # print(connected_nodes)
-        connected_nodes = connected_nodes.to(x.device)
-        connected_nodes = torch.cat([central_nodes[i].unsqueeze(0), connected_nodes])
-        connected_nodes = torch.unique(connected_nodes)
-        # 去除中心：如果中心节点在connected_nodes中，去除 TODO
-        
-        # print(connected_nodes)
-        mask_nodes_ls.append(connected_nodes)
-    assert type(connected_nodes) == torch.Tensor
-    # print(mask_nodes_ls)
 
-    return mask_nodes_ls, central_nodes
+    # 外圆节点集合(含中心点)
+    connected_nodes = get_all_neighbors(g, central_nodes, depth=depth)
+    assert type(connected_nodes) == torch.Tensor
+    mask_nodes = torch.cat((central_nodes, connected_nodes), dim=0)
+    mask_nodes = torch.unique(mask_nodes)
+
+    # 内圆节点集合(含中心点)
+    not_mask_nodes = get_all_neighbors(g, central_nodes, depth=ring_width-depth)
+    mask_nodes = torch.cat((mask_nodes, not_mask_nodes), dim=0)
+    mask_nodes = torch.unique(mask_nodes)
+
+    # 环形应遮盖节点集合，有于torch的集合操作，返回的mask_nodes一定是无重复的
+    mask_nodes = torch.masked_select(mask_nodes, torch.isin(mask_nodes, central_nodes))
+
+    return mask_nodes, central_nodes
+
+
 
 
 class MLP(nn.Module):
@@ -309,7 +195,7 @@ class Encoder1(nn.Module):
 
 
 class CG(nn.Module):
-    def __init__(self, in_hidden, out_hidden, rate, hidden, alpha, layers, depth):
+    def __init__(self, in_hidden, out_hidden, rate, hidden, alpha, layers, depth, ring_width):
         super(CG, self).__init__()
         self.online_encoder = Encoder1(in_hidden, out_hidden, hidden, layers)
         self.target_encoder = Encoder1(in_hidden, out_hidden, hidden, layers)
@@ -317,6 +203,7 @@ class CG(nn.Module):
         self.rate = rate
         self.alpha = alpha
         self.depth = depth
+        self.ring_width = ring_width
         self.enc_mask_token = nn.Parameter(torch.zeros(1, in_hidden))
         self.criterion = self.setup_loss_fn("sce")
 
@@ -368,23 +255,14 @@ class CG(nn.Module):
         assert type(nodes_num) == float
         # 将nodes_num转为int
         nodes_num = int(nodes_num)
-      
-        mask_nodes_ls, central_nodes = mask(graph, feat, nodes_num, 1)
+        mask_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
         remainder_graph_feat = feat.clone()
-
-        mask_nodes = torch.cat(mask_nodes_ls)
-        mask_nodes = torch.unique(mask_nodes)
-        # mask_nodes 下标和 h2的下标对应， mask_nodes的元素值和h1的下标对应
-        # print(mask_nodes)
-            
         sub_graph=graph.subgraph(mask_nodes)
         sub_graph_feat=feat[mask_nodes]
-
         remainder_graph_feat[mask_nodes] = 0.0
-        # h1 行数为 graph.num_nodes()
+        remainder_graph_feat[mask_nodes] += self.enc_mask_token
         h1,_ = self.online_encoder(graph, remainder_graph_feat)
         with torch.no_grad():
-            # h2 行数为 mask_nodes的长度
             h2,_ = self.target_encoder(sub_graph, sub_graph_feat)
         # print(h1[mask_nodes].size())
         # print(h2.size())
@@ -392,18 +270,10 @@ class CG(nn.Module):
         # print(h2.detach().mean(dim=0).size())
         # print(h1[central_nodes].shape)
         # print(h1)
-        sum_loss = 0
-        for i in mask_nodes_ls:
-            # print(i)
-            idx = torch.where(torch.eq(mask_nodes.reshape(-1, 1), i))
-            # print(type(i))
-            # print(h1[i])
-            # print(type(idx[0]))
-            # 根据mask_nodes所反映出的h1，h2的下标对应关系，取得特征矩阵中的相同子图对应行
-            loss = self.criterion(h1[i].mean(dim=0), h2[idx[0]].detach().mean(dim=0))
-            sum_loss += loss
+        # loss = self.criterion(h1[mask_nodes].mean(dim=0), h2.detach().mean(dim=0))
+        loss = self.criterion(h1[mask_nodes], h2.detach())
         # loss = self.criterion(h1[mask_nodes], h2.detach())
-        return sum_loss / len(mask_nodes_ls)
+        return loss
 
     def get_embed(self, graph, feat):
         _, h = self.online_encoder(graph, feat)
