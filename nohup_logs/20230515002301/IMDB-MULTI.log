@@ -178,3 +178,15 @@ seed: 1684129899
 Using degree as node features
 Namespace(acc='50.8+-1.65', agg='Max', alpha=0.5, cuda=0, dataname='IMDB-MULTI', depth=3, epochs=200, hidden=32, layer=1, lr=1e-05, out_hidden=64, rate=0.4, w=1e-05, warmup=100.0)
 Acc: 0.5, Std: 0.027808871486152277
+seed: 1684130380
+Using degree as node features
+Namespace(acc='50.8+-1.65', agg='Max', alpha=0.5, cuda=0, dataname='IMDB-MULTI', depth=3, epochs=200, hidden=32, layer=1, lr=1e-05, out_hidden=64, rate=0.5, w=1e-05, warmup=100.0)
+Acc: 0.5186666666666667, Std: 0.03317294747899926
+seed: 1684130931
+Using degree as node features
+Namespace(acc='50.8+-1.65', agg='Max', alpha=0.5, cuda=0, dataname='IMDB-MULTI', depth=3, epochs=200, hidden=32, layer=1, lr=1e-05, out_hidden=64, rate=0.6, w=1e-05, warmup=100.0)
+Acc: 0.5006666666666667, Std: 0.042941821107167766
+seed: 1684131529
+Using degree as node features
+Namespace(acc='50.8+-1.65', agg='Max', alpha=0.5, cuda=0, dataname='IMDB-MULTI', depth=3, epochs=200, hidden=32, layer=1, lr=1e-05, out_hidden=64, rate=0.7, w=1e-05, warmup=100.0)
+Acc: 0.49799999999999994, Std: 0.03603085097832443
