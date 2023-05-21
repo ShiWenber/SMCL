@@ -84,6 +84,8 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int):
     Returns:
         torch.Tensor: 所有中心点的邻居节点组成的无重复节点张量, 1*neighbors_num
     """
+    if depth < 0:
+        return torch.Tensor([]).to(nodes.device)
     if depth == 0:
         return nodes
     else:
@@ -111,23 +113,27 @@ def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width):
     central_nodes = perm[: num]
     # print(central_nodes.device)
     assert type(central_nodes) == torch.Tensor
+    # 判断central_nodes的shape为1*num
     central_nodes = central_nodes.to(x.device)
     # print(nodes)
     assert central_nodes.is_cuda == True
 
     # 外圆节点集合(含中心点)
-    connected_nodes = get_all_neighbors(g, central_nodes, depth=depth)
-    assert type(connected_nodes) == torch.Tensor
-    mask_nodes = torch.cat((central_nodes, connected_nodes), dim=0)
-    mask_nodes = torch.unique(mask_nodes)
+    connected_nodes_out = get_all_neighbors(g, central_nodes, depth=depth)
+    assert type(connected_nodes_out) == torch.Tensor
+    mask_nodes_out = torch.cat((central_nodes, connected_nodes_out), dim=0)
+    mask_nodes_out = torch.unique(mask_nodes_out)
+    # print("mask_nodes_out:", mask_nodes_out)
 
     # 内圆节点集合(含中心点)
-    not_mask_nodes = get_all_neighbors(g, central_nodes, depth=ring_width-depth)
-    mask_nodes = torch.cat((mask_nodes, not_mask_nodes), dim=0)
-    mask_nodes = torch.unique(mask_nodes)
+    not_mask_nodes = get_all_neighbors(g, central_nodes, depth=depth - ring_width)
+    not_mask_nodes = torch.cat((central_nodes, not_mask_nodes), dim=0)
+    not_mask_nodes = torch.unique(not_mask_nodes)
+    # print("not_mask_nodes:", not_mask_nodes)
 
     # 环形应遮盖节点集合，有于torch的集合操作，返回的mask_nodes一定是无重复的
-    mask_nodes = torch.masked_select(mask_nodes, torch.isin(mask_nodes, central_nodes))
+    # mask_nodes = torch.masked_select(mask_nodes_out, torch.isin(mask_nodes_out, not_mask_nodes))
+    mask_nodes = torch.masked_select(mask_nodes_out, torch.logical_not(torch.isin(mask_nodes_out, not_mask_nodes)))
 
     return mask_nodes, central_nodes
 
@@ -251,14 +257,17 @@ class CG(nn.Module):
             param_k.data.mul_(mm).add_(param_q.data, alpha=1. - mm)
 
     def forward(self, graph, feat):
-        nodes_num = self.rate * graph.num_nodes()
-        assert type(nodes_num) == float
+        # nodes_num = self.rate * graph.num_nodes()
+        nodes_num=1
+        # assert type(nodes_num) == float
         # 将nodes_num转为int
-        nodes_num = int(nodes_num)
         mask_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
+        # print('mask_nodes:',mask_nodes)
         remainder_graph_feat = feat.clone()
         sub_graph=graph.subgraph(mask_nodes)
+        # print('sub_graph:',sub_graph)
         sub_graph_feat=feat[mask_nodes]
+        # print('sub_graph:',sub_graph)
         remainder_graph_feat[mask_nodes] = 0.0
         remainder_graph_feat[mask_nodes] += self.enc_mask_token
         h1,_ = self.online_encoder(graph, remainder_graph_feat)

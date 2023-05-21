@@ -20,13 +20,10 @@ import time
 
 warnings.filterwarnings('ignore')
 
-
 def load_best_configs(args, path):
     with open(path, "r") as f:
         configs = yaml.load(f, yaml.FullLoader)
-
     configs = configs[args.dataname]
-
     for k, v in configs.items():
         if "lr" in k or "w" in k:
             v = float(v)
@@ -36,7 +33,6 @@ def load_best_configs(args, path):
 
 def evaluate_graph_embeddings_using_svm(embeddings, labels):
     result = []
-
     kf = StratifiedKFold(n_splits=10, shuffle=True)
     for train_index, test_index in kf.split(embeddings, labels):
         x_train = embeddings[train_index]
@@ -182,7 +178,6 @@ def train():
     #     best_epoch = epoch
     #
     # print('avg_f1: {0:.2f}, f1_std: {1:.2f}\n'.format(best_acc, best_std))
-
 
 train()
 
