@@ -55,13 +55,13 @@ def get_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor):
         torch.Tensor: 所有中心点的邻居节点组成的无重复节点张量, 1*neighbors_num
     """
     assert nodes.is_cuda == True
-    # print(type(graph))
+    # # print(type(graph))
     adj_matrix = graph.adjacency_matrix()
     # 判断adj_matrix的是否在GPU上
-    # print(adj_matrix.is_cuda)
+    # # print(adj_matrix.is_cuda)
     adj_matrix = adj_matrix.to(nodes.device)
     # adj_matrix = adj_matrix.to(nodes.device)
-    # print(adj_matrix.device)
+    # # print(adj_matrix.device)
     assert adj_matrix.is_cuda == True
 
     # 获得这些节点的邻居
@@ -111,11 +111,11 @@ def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width):
     num_nodes = g.num_nodes()
     perm = torch.randperm(num_nodes, device=x.device)
     central_nodes = perm[: num]
-    # print(central_nodes.device)
+    # # print(central_nodes.device)
     assert type(central_nodes) == torch.Tensor
     # 判断central_nodes的shape为1*num
     central_nodes = central_nodes.to(x.device)
-    # print(nodes)
+    # # print(nodes)
     assert central_nodes.is_cuda == True
 
     # 外圆节点集合(含中心点)
@@ -123,13 +123,13 @@ def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width):
     assert type(connected_nodes_out) == torch.Tensor
     mask_nodes_out = torch.cat((central_nodes, connected_nodes_out), dim=0)
     mask_nodes_out = torch.unique(mask_nodes_out)
-    # print("mask_nodes_out:", mask_nodes_out)
+    # # print("mask_nodes_out:", mask_nodes_out)
 
     # 内圆节点集合(含中心点)
     not_mask_nodes = get_all_neighbors(g, central_nodes, depth=depth - ring_width)
     not_mask_nodes = torch.cat((central_nodes, not_mask_nodes), dim=0)
     not_mask_nodes = torch.unique(not_mask_nodes)
-    # print("not_mask_nodes:", not_mask_nodes)
+    # # print("not_mask_nodes:", not_mask_nodes)
 
     # 环形应遮盖节点集合，有于torch的集合操作，返回的mask_nodes一定是无重复的
     # mask_nodes = torch.masked_select(mask_nodes_out, torch.isin(mask_nodes_out, not_mask_nodes))
@@ -178,12 +178,20 @@ class Encoder1(nn.Module):
                 GINConv(mlp, learn_eps=False)
             )  # set to True if learning epsilon
             self.batch_norms.append(BatchNorm(hidden))
+            
             self.act.append(nn.PReLU())
         self.pool = SumPooling()
 
     def forward(self, graph, h):
+        # print('h:',h)
         output = []
         for i, layer in enumerate(self.ginlayers):
+            # # 如果h只有一个样本，那么就进行unsqueeze(0)操作，增加一个维度
+            # # print('h.dim():',h.dim())
+            # # print('h',h)
+            
+
+            assert h.shape[0] != 1, 'h只有单样本，无法使用batch_norm归一化'
             h = layer(graph, h)
             h = self.batch_norms[i](h)
             h = F.relu(h)
@@ -212,6 +220,9 @@ class CG(nn.Module):
         self.ring_width = ring_width
         self.enc_mask_token = nn.Parameter(torch.zeros(1, in_hidden))
         self.criterion = self.setup_loss_fn("sce")
+
+        
+        self.hidden = hidden
 
         # stop gradient
         for param in self.target_encoder.parameters():
@@ -262,24 +273,43 @@ class CG(nn.Module):
         # assert type(nodes_num) == float
         # 将nodes_num转为int
         mask_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
-        # print('mask_nodes:',mask_nodes)
+        # # print('mask_nodes:',mask_nodes)
         remainder_graph_feat = feat.clone()
+        # print('mask_nodes:',mask_nodes)
         sub_graph=graph.subgraph(mask_nodes)
         # print('sub_graph:',sub_graph)
+        # # print('sub_graph:',sub_graph)
         sub_graph_feat=feat[mask_nodes]
-        # print('sub_graph:',sub_graph)
+        # # print('sub_graph:',sub_graph)
         remainder_graph_feat[mask_nodes] = 0.0
         remainder_graph_feat[mask_nodes] += self.enc_mask_token
+
         h1,_ = self.online_encoder(graph, remainder_graph_feat)
         with torch.no_grad():
+            # if sub_graph_feat.shape[0] == 1:
+            #     # TODO 添加编码过程，将特征维度补全至和online_encoder一致
+            #     # print('h只有单样本，无法使用batch_norm归一化') # 卷积直接报错？应该按照gin的特征来手动补全h2
+            #     # print('sub_graph_feat:',sub_graph_feat)
+            #     # 将特征复制到和hidden维度一致
+            #     # TODO
+            #     # h2 = sub_graph_feat.repeat(1, self.hidden // sub_graph_feat.shape[1]) # 1 * 28
+            # else:
+            #     h2,_ = self.target_encoder(sub_graph, sub_graph_feat)
+
             h2,_ = self.target_encoder(sub_graph, sub_graph_feat)
-        # print(h1[mask_nodes].size())
-        # print(h2.size())
-        # print(h1[mask_nodes].mean(dim=0).size())
-        # print(h2.detach().mean(dim=0).size())
-        # print(h1[central_nodes].shape)
-        # print(h1)
+            
+        # # print(h1[mask_nodes].size())
+        # # print(h2.size())
+        # # print(h1[mask_nodes].mean(dim=0).size())
+        # # print(h2.detach().mean(dim=0).size())
+        # # print(h1[central_nodes].shape)
+        # # print(h1)
         # loss = self.criterion(h1[mask_nodes].mean(dim=0), h2.detach().mean(dim=0))
+        # print('mask_nodes:',mask_nodes)
+        # print('h1[mask_nodes]:',h1[mask_nodes])
+        # print('h1[mask_nodes].shape:',h1[mask_nodes].shape)
+        # print('h2:',h2.shape)
+        # print('h2.detach():',h2.detach())
         loss = self.criterion(h1[mask_nodes], h2.detach())
         # loss = self.criterion(h1[mask_nodes], h2.detach())
         return loss

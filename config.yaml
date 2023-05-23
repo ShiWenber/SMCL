@@ -3,7 +3,6 @@ MUTAG:
   hidden: 32
   epochs: 500
   lr: 1e-3
-  rate: 0.1
   warmup: 100
   w: 1e-5
   acc: 90.50+-8.4
@@ -14,7 +13,6 @@ PROTEINS:
   hidden: 32
   epochs: 100
   lr: 1e-5
-  rate: 0.3
   warmup: 100
   w: 1e-5
   acc: 75.83+-2.1
@@ -25,7 +23,6 @@ COLLAB:
   hidden: 32
   epochs: 50
   lr: 1e-5
-  rate: 0.9
   warmup: 100
   w: 1e-5
   acc: 78.8+-1.5
@@ -37,7 +34,6 @@ NCI1:
   hidden: 32
   epochs: 20
   lr: 1e-5
-  rate: 0.1
   warmup: 100
   w: 1e-4
   acc: 80.97+-2.7
@@ -48,7 +44,6 @@ IMDB-BINARY:
   hidden: 32
   epochs: 100
   lr: 1e-5
-  rate: 0.1
   warmup: 100
   w: 5e-4
   acc: 74.8+-4.7
@@ -59,7 +54,6 @@ IMDB-MULTI:
   hidden: 32
   epochs: 200
   lr: 1e-5
-  rate: 0.7
   warmup: 100
   w: 1e-5
   acc: 50.8+-1.65
@@ -82,7 +76,6 @@ REDDIT-MULTI5K:
   hidden: 32
   epochs: 100
   lr: 1e-3
-  rate: 0.5
   warmup: 100
   w: 1e-5
   acc: 55.17+-8.4,0.7
@@ -122,6 +115,7 @@ NCI109:
   acc: 80.2+-1.9
   alpha: 0.3
   layer: 3
+
 mydata:
   out_hidden: 64
   hidden: 32
@@ -134,3 +128,34 @@ mydata:
   alpha: 0.3
   layer: 2 
   featdim: 256
+mit_ct1:
+  out_hidden: 64
+  hidden: 32
+  epochs: 100
+  lr: 1e-5
+  warmup: 100
+  w: 5e-4
+  acc: 
+  alpha: 0.2
+  layer: 2
+facebook_ct1:
+  out_hidden: 64
+  hidden: 32
+  epochs: 100
+  lr: 1e-5
+  warmup: 100
+  w: 5e-4
+  acc: 
+  alpha: 0.2
+  layer: 2
+
+REDDIT-BINARY:
+  out_hidden: 64
+  hidden: 32
+  epochs: 100
+  lr: 1e-3
+  warmup: 100
+  w: 1e-5
+  acc: 55.17+-8.4,0.7
+  alpha: 0.5
+  layer: 2
