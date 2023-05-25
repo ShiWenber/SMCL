@@ -1,0 +1,5 @@
+central_nodes: tensor([0], device='cuda:0')
+mask_nodes: tensor([], device='cuda:0', dtype=torch.int64)
+mask_nodes_test: tensor([], device='cuda:0', dtype=torch.int64)
+
+

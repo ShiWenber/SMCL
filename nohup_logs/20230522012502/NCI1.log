@@ -90,3 +90,27 @@ Use node label as node features
 Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=1, w=0.0001, warmup=100.0)
 Use node label as node features
 Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=2, w=0.0001, warmup=100.0)
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=3, w=0.0001, warmup=100.0)
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=4, w=0.0001, warmup=100.0)
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=5, w=0.0001, warmup=100.0)
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=6, w=0.0001, warmup=100.0)
+Acc: 0.8055961070559612, Std: 0.012475371039702435
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=7, w=0.0001, warmup=100.0)
+Acc: 0.8041362530413625, Std: 0.012128898861911945
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=8, w=0.0001, warmup=100.0)
+Acc: 0.802919708029197, Std: 0.01372055686605517
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=8, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=9, w=0.0001, warmup=100.0)
+Acc: 0.802919708029197, Std: 0.01372055686605517
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=9, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=1, w=0.0001, warmup=100.0)
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=9, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=2, w=0.0001, warmup=100.0)
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=9, epochs=20, hidden=512, layer=3, lr=1e-05, out_hidden=64, rate=0.1, ring_width=3, w=0.0001, warmup=100.0)

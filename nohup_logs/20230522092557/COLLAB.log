@@ -81,3 +81,37 @@ Acc: 0.7792, Std: 0.020143485299222674
 Using degree as node features
 Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=7, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=3, w=1e-05, warmup=100.0)
 Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=7, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=4, w=1e-05, warmup=100.0)
+Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=7, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=5, w=1e-05, warmup=100.0)
+Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=7, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=6, w=1e-05, warmup=100.0)
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=7, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=7, w=1e-05, warmup=100.0)
+Acc: 0.7834, Std: 0.016396341055247652
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=7, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=8, w=1e-05, warmup=100.0)
+Acc: 0.7826000000000001, Std: 0.01752826289168439
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=8, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
+Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=8, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=2, w=1e-05, warmup=100.0)
+Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=8, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=3, w=1e-05, warmup=100.0)
+Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=8, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=4, w=1e-05, warmup=100.0)
+Acc: 0.7789999999999999, Std: 0.02047925779905121
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=8, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=5, w=1e-05, warmup=100.0)
+Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=8, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=6, w=1e-05, warmup=100.0)
+Acc: 0.7792, Std: 0.020143485299222674
+Using degree as node features
+Namespace(acc='78.8+-1.5', agg='Max', alpha=0.6, cuda=0, dataname='COLLAB', depth=8, epochs=50, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=7, w=1e-05, warmup=100.0)
