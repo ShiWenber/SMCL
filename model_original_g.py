@@ -39,12 +39,6 @@ def sce_loss(x, y, alpha=3):
     loss = loss.mean()
     return loss
 
-# def mask(g, x, mask_rate=0.5):
-#     num_nodes = g.num_nodes()
-#     perm = torch.randperm(num_nodes, device=x.device)
-#     num_mask_nodes = int(mask_rate * num_nodes)
-#     mask_nodes = perm[: num_mask_nodes]
-
 # 多重递归获得邻居节点
 # @functools.lru_cache(maxsize=16)
 def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_matrix:torch.Tensor=None):
@@ -146,17 +140,12 @@ def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_nodes=N
     else:
         not_mask_nodes = torch.Tensor([]).to(x.device) 
 
-
-
-    # not_mask_nodes = get_all_neighbors(g, central_nodes,depth - ring_width, adj_matrix)
-    # not_mask_nodes = torch.cat((central_nodes, not_mask_nodes), dim=0)
-    # not_mask_nodes = torch.unique(not_mask_nodes)
-
     # 环形应遮盖节点集合，有于torch的集合操作，返回的mask_nodes一定是无重复的
     # mask_nodes = torch.masked_select(mask_nodes_out, torch.isin(mask_nodes_out, not_mask_nodes))
     mask_nodes = torch.masked_select(mask_nodes_out, torch.logical_not(torch.isin(mask_nodes_out, not_mask_nodes)))
 
     return mask_nodes, central_nodes
+
 
 
 
@@ -295,17 +284,17 @@ class CG(nn.Module):
         # 将nodes_num转为int
         mask_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
         # # print('mask_nodes:',mask_nodes)
-        remainder_graph_feat = feat.clone()
+        masked_graph_feat = feat.clone()
         # print('mask_nodes:',mask_nodes)
-        sub_graph=graph.subgraph(mask_nodes)
+        # sub_graph=graph.subgraph(mask_nodes)
         # print('sub_graph:',sub_graph)
         # # print('sub_graph:',sub_graph)
-        sub_graph_feat=feat[mask_nodes]
+        # sub_graph_feat=feat[mask_nodes]
         # # print('sub_graph:',sub_graph)
-        remainder_graph_feat[mask_nodes] = 0.0
-        remainder_graph_feat[mask_nodes] += self.enc_mask_token
+        masked_graph_feat[mask_nodes] = 0.0
+        masked_graph_feat[mask_nodes] += self.enc_mask_token
 
-        h1,_ = self.online_encoder(graph, remainder_graph_feat)
+        h1,_ = self.online_encoder(graph, masked_graph_feat)
         with torch.no_grad():
             # if sub_graph_feat.shape[0] == 1:
             #     # TODO 添加编码过程，将特征维度补全至和online_encoder一致
@@ -317,7 +306,7 @@ class CG(nn.Module):
             # else:
             #     h2,_ = self.target_encoder(sub_graph, sub_graph_feat)
 
-            h2,_ = self.target_encoder(sub_graph, sub_graph_feat)
+            h2,_ = self.target_encoder(graph, feat)
             
         # # print(h1[mask_nodes].size())
         # # print(h2.size())
@@ -331,7 +320,7 @@ class CG(nn.Module):
         # print('h1[mask_nodes].shape:',h1[mask_nodes].shape)
         # print('h2:',h2.shape)
         # print('h2.detach():',h2.detach())
-        loss = self.criterion(h1[mask_nodes], h2.detach())
+        loss = self.criterion(h1[mask_nodes], h2[mask_nodes].detach())
         # loss = self.criterion(h1[mask_nodes], h2.detach())
         return loss
 

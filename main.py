@@ -3,7 +3,8 @@ from torch.optim import Adam
 from dgl.dataloading import GraphDataLoader
 from torch.utils.data.sampler import SubsetRandomSampler
 import dgl
-from model import CG, CosineDecayScheduler, LogReg
+# from model import CG, CosineDecayScheduler, LogReg
+from model_original_g import CG, CosineDecayScheduler, LogReg
 from torch_geometric import seed_everything
 import numpy as np
 import warnings

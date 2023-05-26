@@ -174,7 +174,7 @@ def graph_show(graph, index):
 
 
 def load_graph_classification_dataset(dataset_name, deg4feat=False):
-    dataset_name = dataset_name.upper()
+    # dataset_name = dataset_name.upper()
     dataset = TUDataset(dataset_name)
     graph, _ = dataset[0]
 

@@ -1,6 +1,7 @@
 MUTAG:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 500
   lr: 1e-3
   warmup: 100
@@ -10,7 +11,8 @@ MUTAG:
   layer: 1
 PROTEINS:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-5
   warmup: 100
@@ -20,7 +22,8 @@ PROTEINS:
   layer: 2
 COLLAB:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 50
   lr: 1e-5
   warmup: 100
@@ -31,7 +34,8 @@ COLLAB:
   agg: Max
 NCI1:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 20
   lr: 1e-5
   warmup: 100
@@ -41,7 +45,8 @@ NCI1:
   layer: 3
 IMDB-BINARY:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-5
   warmup: 100
@@ -51,7 +56,8 @@ IMDB-BINARY:
   layer: 2
 IMDB-MULTI:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 200
   lr: 1e-5
   warmup: 100
@@ -62,7 +68,8 @@ IMDB-MULTI:
   agg: Max
 DD:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 50
   lr: 1e-4
   rate: 0.4
@@ -73,7 +80,8 @@ DD:
   layer: 3
 REDDIT-MULTI5K:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-3
   warmup: 100
@@ -83,7 +91,8 @@ REDDIT-MULTI5K:
   layer: 2
 ENZYMES:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-4
   rate: 0.1
@@ -93,7 +102,8 @@ ENZYMES:
   layer: 2
 PTC-MR:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 50
   lr: 1e-4
   rate: 0.1
@@ -105,7 +115,8 @@ PTC-MR:
   featdim: 18
 NCI109:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-5
   depth: 2
@@ -118,7 +129,8 @@ NCI109:
 
 mydata:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-5
   rate: 0.2
@@ -130,7 +142,8 @@ mydata:
   featdim: 256
 mit_ct1:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-5
   warmup: 100
@@ -140,7 +153,8 @@ mit_ct1:
   layer: 2
 facebook_ct1:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-5
   warmup: 100
@@ -151,7 +165,8 @@ facebook_ct1:
 
 REDDIT-BINARY:
   out_hidden: 64
-  hidden: 32
+  # hidden: 32
+  hidden: 512
   epochs: 100
   lr: 1e-3
   warmup: 100
