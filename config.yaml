@@ -78,7 +78,7 @@ DD:
   acc: 78.61+-4.3
   alpha: 0.5
   layer: 3
-REDDIT-MULTI5K:
+REDDIT-MULTI-5K:
   out_hidden: 64
   # hidden: 32
   hidden: 512

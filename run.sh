@@ -13,7 +13,7 @@ do
         python main.py --dataname PROTEINS --depth $i --rate 0.$j  --ring_width $k  >> nohup_logs/${time_str}/PROTEINS.log;
         python main.py --dataname REDDIT-BINARY --depth $i --rate 0.$j  --ring_width $k  >> nohup_logs/${time_str}/REDDIT-BINARY.log;
         python main.py --dataname NCI1 --depth $i --rate 0.$j  --ring_width $k  >> nohup_logs/${time_str}/NCI1.log;
-        python main.py --dataname REDDIT-MULTI5K --depth $i --rate 0.$j  --ring_width $k  >> nohup_logs/${time_str}/REDDIT-MULTI5K.log;
+        python main.py --dataname  REDDIT-MULTI-5K --depth $i --rate 0.$j  --ring_width $k  >> nohup_logs/${time_str}/REDDIT-MULTI-5K.log;
         python main.py --dataname COLLAB --depth $i --rate 0.$j  --ring_width $k  >> nohup_logs/${time_str}/COLLAB.log;
     done
     # for k in {2..7};
