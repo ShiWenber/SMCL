@@ -265,7 +265,7 @@ class CG(nn.Module):
         nodes_num=1
         # assert type(nodes_num) == float
         # 将nodes_num转为int
-        mask_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
+        mask_nodes, central_nodes = mask_right(graph, feat, nodes_num, self.depth, self.ring_width)
         # # print('mask_nodes:',mask_nodes)
         masked_graph_feat = feat.clone()
         # print('mask_nodes:',mask_nodes)
