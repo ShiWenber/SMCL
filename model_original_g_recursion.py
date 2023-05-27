@@ -41,7 +41,7 @@ def sce_loss(x, y, alpha=3):
 
 #     return mask_nodes
 @functools.lru_cache(maxsize=16)
-def get_neighbors_right(graph:dgl.DGLGraph, nodes:torch.Tensor, adj_matrix:torch.Tensor=None):
+def get_neighbors_right(graph:dgl.DGLGraph, nodes:torch.Tensor):
     """获得一个中心点列表中所有中心点的邻居，不包括中心点本身，且去重
     Args:
         graph (dgl.DGLGraph): 图对象
@@ -70,7 +70,7 @@ def get_neighbors_right(graph:dgl.DGLGraph, nodes:torch.Tensor, adj_matrix:torch
 
 # 多重递归获得邻居节点
 @functools.lru_cache(maxsize=16)
-def get_all_neighbors_right(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_matrix:torch.Tensor=None):
+def get_all_neighbors_right(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int):
     """多重递归获得邻居节点集合张量（逻辑上是集合，物理数据结构为torch.Tensor），且去重
     Args:
         graph (dgl.DGLGraph): 输入图
@@ -103,7 +103,6 @@ def mask_right(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_n
     """
     assert 1 <= ring_width <= depth + 1, "ring_width must be in [1, depth + 1]"
     num_nodes = g.num_nodes()
-    adj_matrix = g.adjacency_matrix().to_dense().to(x.device)
 
     if central_nodes == None:
         perm = torch.randperm(num_nodes, device=x.device)
@@ -117,11 +116,11 @@ def mask_right(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_n
     assert central_nodes.is_cuda == True
 
     # 外圆节点集合(含中心点)
-    mask_nodes_out = get_all_neighbors_right(g, central_nodes, depth, adj_matrix)
+    mask_nodes_out = get_all_neighbors_right(g, central_nodes, depth)
     assert type(mask_nodes_out) == torch.Tensor
 
     # 内圆节点集合(含中心点)
-    not_mask_nodes = get_all_neighbors_right(g, central_nodes,depth - ring_width, adj_matrix)
+    not_mask_nodes = get_all_neighbors_right(g, central_nodes,depth - ring_width)
     # not_mask_nodes = torch.cat((central_nodes, not_mask_nodes), dim=0)
     # not_mask_nodes = torch.unique(not_mask_nodes)
 
@@ -132,8 +131,6 @@ def mask_right(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_n
     # mask_nodes可能没有元素，这种情况在没有邻居的情况下会出现，此时环内可能没有节点，这种情况应该返回空集
 
     return mask_nodes, central_nodes
-
-
 
 
 class MLP(nn.Module):
