@@ -52,3 +52,6 @@ Acc: 0.7438867438867438, Std: 0.042123433666575984
 Use node label as node features
 Namespace(acc='75.83+-2.1', alpha=0.5, cuda=0, dataname='PROTEINS', depth=5, epochs=100, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=4, w=1e-05, warmup=100.0)
 Acc: 0.745680501930502, Std: 0.040908880888332916
+Use node label as node features
+Namespace(acc='75.83+-2.1', alpha=0.5, cuda=0, dataname='PROTEINS', depth=5, epochs=100, hidden=512, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=5, w=1e-05, warmup=100.0)
+Acc: 0.7429938867438868, Std: 0.04149631952344776

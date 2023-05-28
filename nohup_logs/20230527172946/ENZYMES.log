@@ -49,3 +49,6 @@ Acc: 0.5466666666666666, Std: 0.06046119049072351
 Use node label as node features
 Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=5, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=3, w=1e-05, warmup=100.0)
 Acc: 0.5650000000000001, Std: 0.06890008869531461
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=5, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=4, w=1e-05, warmup=100.0)
+Acc: 0.5566666666666666, Std: 0.0731057073315377

@@ -28,30 +28,32 @@ def get_files_by_re(base, files_re):
 
   return paths
 
-def get_acc(path: str):
+def get_acc(paths: list()):
     """获取nohup日志中的acc值
 
     Args:
-        path (str): 日志文件路径
+        path (list(str)): 日志文件路径
 
     Returns:
         tuple: (acc_max, acc_mean, acc_minus, acc_plus, acc_ls)
     """
     # data = open("./nohup_logs/20230515002301/IMDB-BINARY.log").read()
-    data = open(path).read()
-    # 按照换行符和逗号分割字符串
-    data_ls = data.split("\n")
     acc_ls = []
-    for i in data_ls:
-        for j in i.split(","):
-            if (j.startswith("Acc")):
-                # print(j)
-                j.replace("Acc: ","")
-                acc = float(j.split(": ")[1])
-                acc_ls.append(acc)
+    for path in paths:
+        data = open(path).read()
+        # 按照换行符和逗号分割字符串
+        data_ls = data.split("\n")
+        for i in data_ls:
+            for j in i.split(","):
+                if (j.startswith("Acc")):
+                    # print(j)
+                    j.replace("Acc: ","")
+                    acc = float(j.split(": ")[1])
+                    acc_ls.append(acc)
     if len(acc_ls) == 0:
-        print("acc_ls is null")
-        return
+        print(f"{path} acc_ls is null")
+        return None
+
     # 计算acc的平均值和+/-误差
     acc_mean = np.mean(acc_ls)
     print("acc_mean: ",acc_mean)
@@ -102,13 +104,12 @@ if __name__ == "__main__":
         for j in dataname_2_path_ls_dict[i]:
             print(j)
         acc_max = 0
-        for j in dataname_2_path_ls_dict[i]:
-            res = get_acc(j)
-            if (res == None):
-                continue
-            acc_max = res[0]
-            name = i
-            acc_dict[name] = acc_max
+        res = get_acc(dataname_2_path_ls_dict[i])
+        if (res == None):
+            continue
+        acc_max = res[0]
+        name = i
+        acc_dict[name] = acc_max
 
     print(dataname_2_path_ls_dict) 
     print()
