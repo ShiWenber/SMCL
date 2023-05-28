@@ -1,0 +1,213 @@
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=1, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8885964912280702, Std: 0.08283115335307992
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=1, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8880116959064328, Std: 0.06904610283879759
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=2, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8725146198830409, Std: 0.06754575830854632
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=2, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8827485380116957, Std: 0.07032695631001616
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=2, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8403508771929824, Std: 0.06287841564531103
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=3, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8777777777777777, Std: 0.06701968705430733
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=3, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8619883040935672, Std: 0.06311727088576384
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=3, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8935672514619883, Std: 0.07850427965846689
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=3, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8616959064327485, Std: 0.08303321354425545
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=4, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8725146198830409, Std: 0.08563009148640233
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=4, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.861111111111111, Std: 0.08582008327507926
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=4, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8728070175438598, Std: 0.0851399530194284
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=4, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8350877192982455, Std: 0.08118130255764597
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=4, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8409356725146198, Std: 0.10233249769319837
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=5, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8833333333333334, Std: 0.061004692029733465
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=5, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8514619883040935, Std: 0.07348203955016656
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=5, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8400584795321636, Std: 0.0968719231152536
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=5, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8564327485380117, Std: 0.07900636738480712
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=5, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8456140350877194, Std: 0.08140846593765681
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=5, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8511695906432747, Std: 0.08483009974440846
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=6, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8616959064327485, Std: 0.0855686654783584
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=6, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8777777777777777, Std: 0.06701968705430732
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=6, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8619883040935672, Std: 0.053626081742652626
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=6, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8350877192982455, Std: 0.09674960975347202
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=6, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8511695906432747, Std: 0.09112726849655658
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=6, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8353801169590642, Std: 0.106715532692071
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=6, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8406432748538011, Std: 0.0974281115879891
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8833333333333334, Std: 0.07337317160337606
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8716374269005847, Std: 0.0952377379846441
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8669590643274854, Std: 0.055312642222099265
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8350877192982455, Std: 0.07404303237954821
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.867251461988304, Std: 0.07899283940675766
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.862280701754386, Std: 0.07462100587616961
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8248538011695906, Std: 0.09444444444444444
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=7, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8514619883040935, Std: 0.09038635538036323
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.856140350877193, Std: 0.09002619608194941
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8567251461988302, Std: 0.06235684333364362
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8991228070175439, Std: 0.054784585815669216
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8614035087719298, Std: 0.05504847064088283
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8564327485380115, Std: 0.06345029239766081
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8514619883040935, Std: 0.08726784412626855
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8514619883040935, Std: 0.07348203955016655
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8353801169590642, Std: 0.11609365503553412
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=8, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8464912280701755, Std: 0.08238404628972952
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8883040935672513, Std: 0.08339025449033144
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8403508771929824, Std: 0.06437000189855913
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8403508771929824, Std: 0.058306762331361554
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8780701754385966, Std: 0.07789036831611527
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.872514619883041, Std: 0.07488120843279118
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8564327485380117, Std: 0.052833433582477725
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8564327485380115, Std: 0.06673396111134068
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8514619883040935, Std: 0.08403368371045081
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8195906432748536, Std: 0.09768051417464875
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=9, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8307017543859649, Std: 0.09281910326389563
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8564327485380117, Std: 0.07900636738480712
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.893859649122807, Std: 0.07041928880230805
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8400584795321636, Std: 0.0643812906292301
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8514619883040935, Std: 0.06961029748502463
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8780701754385966, Std: 0.07789036831611527
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8505847953216374, Std: 0.06805331778156465
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8616959064327485, Std: 0.06322892367228397
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8564327485380115, Std: 0.06673396111134068
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8409356725146198, Std: 0.09086183798566914
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8573099415204679, Std: 0.08441941279058865
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=10, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8248538011695906, Std: 0.09146439999213431
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=11, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8777777777777777, Std: 0.05816876491606178
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=11, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8187134502923976, Std: 0.10249778853897844
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=11, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8666666666666666, Std: 0.07769419067380418
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=11, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8190058479532164, Std: 0.06012950127431483
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=11, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8353801169590642, Std: 0.07276003087044222
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=11, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)
+Acc: 0.8619883040935671, Std: 0.06311727088576384

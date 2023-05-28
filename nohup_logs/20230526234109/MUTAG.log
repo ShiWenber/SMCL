@@ -1,0 +1,2 @@
+Use node label as node features
+Namespace(dataname='MUTAG', cuda=0, depth=1, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=500, lr=0.001, warmup=100.0, w=1e-05, acc='90.50+-8.4', alpha=0.3, layer=1)

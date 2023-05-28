@@ -1,0 +1,213 @@
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=1, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7474903474903475, Std: 0.04017624519336323
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=1, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7492599742599741, Std: 0.04398174788055497
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=2, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7493162805662806, Std: 0.04291688665807601
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=2, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7447715572715573, Std: 0.04221825240858378
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=2, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7438947876447877, Std: 0.04188134548791885
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=3, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7519948519948519, Std: 0.03485249624660012
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=3, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7546814671814672, Std: 0.042227550964203456
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=3, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429938867438868, Std: 0.0392859720342819
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=3, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7403072715572716, Std: 0.043198159884586154
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=4, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7502091377091377, Std: 0.04415179443185482
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=4, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7465974903474903, Std: 0.03895764086445796
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=4, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.751061776061776, Std: 0.040997178030253274
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=4, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7430019305019305, Std: 0.041074582309257854
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=4, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429938867438868, Std: 0.04030570483198109
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=5, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7492921492921493, Std: 0.04034902979334549
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=5, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7492760617760618, Std: 0.040222940583793006
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=5, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7438867438867438, Std: 0.042123433666575984
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=5, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.745680501930502, Std: 0.040908880888332916
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=5, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429938867438868, Std: 0.04149631952344776
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=5, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429697554697554, Std: 0.04220401558235253
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=6, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7474983912483913, Std: 0.040939622233261225
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=6, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.744779601029601, Std: 0.038568397247845866
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=6, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.74747425997426, Std: 0.0392298821574808
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=6, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7421010296010296, Std: 0.04046205068604427
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=6, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7430019305019305, Std: 0.041074582309257854
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=6, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7456885456885457, Std: 0.0405232395771245
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=6, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7447635135135136, Std: 0.043162995288813365
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7447876447876449, Std: 0.039569171268485255
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7492760617760618, Std: 0.04181293676308939
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7474823037323037, Std: 0.03980433247630412
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7510698198198199, Std: 0.044022717635339985
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7385215572715573, Std: 0.03923715244518994
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7465733590733591, Std: 0.03869235246442561
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.745680501930502, Std: 0.0405670898146246
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=7, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7465814028314028, Std: 0.04659977858981436
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7411840411840412, Std: 0.033044952445834344
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7438867438867439, Std: 0.03914511194847339
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.740291184041184, Std: 0.043278394214058415
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429858429858429, Std: 0.03834144496358413
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.740299227799228, Std: 0.03592582602405315
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.742117117117117, Std: 0.0399714401569165
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7465814028314028, Std: 0.03714313171242937
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.746581402831403, Std: 0.03886677382008143
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=8, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7537725225225226, Std: 0.04359566147955163
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7465974903474905, Std: 0.04368559069231723
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7483671171171171, Std: 0.03895302348165557
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7420929858429858, Std: 0.03987789975691079
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7358188545688545, Std: 0.03884630577216816
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7501528314028314, Std: 0.042912185664203635
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429777992277993, Std: 0.041962568073907955
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.744779601029601, Std: 0.03854594452837394
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7457046332046332, Std: 0.03814852130080606
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7447956885456886, Std: 0.04168405572382328
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=9, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7510698198198198, Std: 0.03991338435217342
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7447796010296012, Std: 0.035019412217515096
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.746573359073359, Std: 0.037844000113252015
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7447715572715572, Std: 0.04217037871350978
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7438947876447877, Std: 0.041091850323283996
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.736703667953668, Std: 0.04006566813503126
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7483912483912484, Std: 0.04405752133425431
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429697554697554, Std: 0.04238908158609496
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.749268018018018, Std: 0.04161325246746213
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7429858429858431, Std: 0.037465901185834614
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7474903474903475, Std: 0.042134319503590055
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=10, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7492519305019305, Std: 0.04454008382459698
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=11, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7501850064350064, Std: 0.04354540329267258
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=11, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.745680501930502, Std: 0.04191667147771995
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=11, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7438867438867438, Std: 0.038499345291765255
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=11, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7483671171171171, Std: 0.0436352047684086
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=11, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7483751608751609, Std: 0.04148157210429697
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=1, depth=11, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7384974259974261, Std: 0.041727711031052925

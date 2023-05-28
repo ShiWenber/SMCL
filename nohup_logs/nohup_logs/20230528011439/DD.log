@@ -1,0 +1,405 @@
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=1, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7647906707228741, Std: 0.0434997042254558
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=1, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.769911632623497, Std: 0.033632376542639855
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=2, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7749891351586267, Std: 0.04275286779258102
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=2, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7707518470230335, Std: 0.042009583524019296
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=2, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741561639866724, Std: 0.041293639810923405
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=3, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741416775315081, Std: 0.042735850531433334
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=3, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758438360133276, Std: 0.04369486929730221
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=3, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.775858322468492, Std: 0.04395043731938107
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=3, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758728089236564, Std: 0.04733209588334367
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=4, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7707590902506156, Std: 0.04600534673130104
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=4, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716210343328986, Std: 0.044893755944564954
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=4, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758510792409098, Std: 0.04604537719679403
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=4, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7766985368680284, Std: 0.040747136477133385
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=4, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7792481529769665, Std: 0.037970019407865596
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=5, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7775387512675648, Std: 0.03706060300323128
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=5, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758438360133275, Std: 0.04027366175310728
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=5, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741634072142547, Std: 0.039254838110136865
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=5, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750108648413734, Std: 0.045222664337257884
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=5, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716137911053165, Std: 0.043161255429489655
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=5, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716065478777343, Std: 0.045482864689521736
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=6, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741416775315081, Std: 0.04065409875247216
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=6, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7732942199043894, Std: 0.03845430069127556
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=6, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7767057800956106, Std: 0.0381405943651319
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=6, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741561639866725, Std: 0.04127273448485342
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=6, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7767057800956106, Std: 0.0407096557761245
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=6, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7733087063595538, Std: 0.03963961169221436
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=6, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758510792409098, Std: 0.04041094234342541
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758510792409098, Std: 0.046971894711267746
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7792481529769665, Std: 0.04090257798610215
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7733014631319717, Std: 0.049938214963581334
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758438360133276, Std: 0.04220720199329753
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758438360133276, Std: 0.04321608533491211
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741706504418369, Std: 0.04515996203636743
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750036216137912, Std: 0.04249017136415068
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=7, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741561639866725, Std: 0.042810183475597105
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7690569317687961, Std: 0.04343700472599088
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741489207590903, Std: 0.03953560965896856
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7707518470230335, Std: 0.04605364625780224
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7733014631319716, Std: 0.04494244753132858
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758438360133276, Std: 0.04418520870940883
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7792481529769666, Std: 0.03834644378588647
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7809430682312039, Std: 0.042096241010872996
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.775858322468492, Std: 0.04571259689748973
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=8, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7784151818050123, Std: 0.04631844180328028
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7732942199043894, Std: 0.035525272702684345
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7690641749963784, Std: 0.042392873519470714
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7775387512675649, Std: 0.04364567301562287
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7766768071852818, Std: 0.04294552085999753
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7724467622772708, Std: 0.04446498421144649
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7749963783862089, Std: 0.04338188080225635
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750108648413734, Std: 0.045869637219984626
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7818050123134869, Std: 0.0420582635957779
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.775858322468492, Std: 0.048011424099279304
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=9, rate=0.4, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.780950311458786, Std: 0.043386737323365364
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7749963783862089, Std: 0.03651987939560352
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741634072142547, Std: 0.041392107680037635
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741416775315081, Std: 0.045172727806133205
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758438360133275, Std: 0.040094939112168076
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7766912936404463, Std: 0.041156233282463615
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7826379834854411, Std: 0.04560040008070589
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7800956106040852, Std: 0.04593055060116918
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750181080689555, Std: 0.03940129992913316
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.779262639432131, Std: 0.0463843451143683
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.778400695349848, Std: 0.04511553132747587
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=10, rate=0.4, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.780124583514414, Std: 0.04748382020987305
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7792409097493843, Std: 0.039146824744839756
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7733087063595538, Std: 0.04069702734296997
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7809430682312039, Std: 0.04258761649211447
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.772454005504853, Std: 0.04157204076413102
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7817905258583224, Std: 0.03912444246462797
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758510792409098, Std: 0.03877848712529378
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758655656960741, Std: 0.04170323364202367
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7766912936404462, Std: 0.04790244915186818
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750108648413734, Std: 0.041582306581828835
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7834999275677241, Std: 0.04676752988645882
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750181080689555, Std: 0.038479137115186884
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=11, rate=0.4, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7775604809503115, Std: 0.042672840752748596
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7707446037954513, Std: 0.047937412112563076
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7800811241489208, Std: 0.04071741327901458
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.772454005504853, Std: 0.04139892371426265
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741489207590903, Std: 0.04303275145238485
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741416775315081, Std: 0.04548958907967252
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758510792409098, Std: 0.042150695688635616
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7758438360133275, Std: 0.04169360663599782
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.775858322468492, Std: 0.04226729894446476
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7783934521222656, Std: 0.04689301842225968
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7767130233231929, Std: 0.0382724777404077
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7767202665507751, Std: 0.045913998645755516
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7860278139939156, Std: 0.05178034864126904
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=12, rate=0.4, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7766985368680284, Std: 0.04714063070512767
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7741634072142547, Std: 0.03310087564704125
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.783492684340142, Std: 0.043813953154074235
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7783934521222656, Std: 0.04083501804489413
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.772454005504853, Std: 0.04552980451945871
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7809430682312037, Std: 0.045205354727101965
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7707446037954513, Std: 0.04354092556874777
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7784006953498479, Std: 0.04060268346538683
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7792336665218021, Std: 0.04436440470867225
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7851731131392148, Std: 0.04734973216300601
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7783934521222656, Std: 0.048102647385692164
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.780088367376503, Std: 0.04503348760433968
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.772454005504853, Std: 0.04344783817860092
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.780088367376503, Std: 0.04736528617815673
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=13, rate=0.4, ring_width=14, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.777545994495147, Std: 0.04890525994586365
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7792553962045488, Std: 0.03538226150941526
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.775858322468492, Std: 0.04122324706750038
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750036216137911, Std: 0.03686336126801569
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7809358250036216, Std: 0.044455591195471975
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7775387512675648, Std: 0.04526126002376628
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7783934521222656, Std: 0.05170064700168671
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7715993046501521, Std: 0.04356970937931623
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7750036216137911, Std: 0.04877221846746012
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7783934521222656, Std: 0.04012535288749377
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7792553962045488, Std: 0.045047416026229595
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7749963783862089, Std: 0.04749150961400563
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716137911053165, Std: 0.03839064294918653
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716065478777343, Std: 0.0476422356811536
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=14, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7682167173692598, Std: 0.04475034591501438
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=14, rate=0.4, ring_width=15, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7826379834854411, Std: 0.05009312144073472
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716210343328986, Std: 0.045713603993114325
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716137911053165, Std: 0.044134376507373
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7784079385774302, Std: 0.04443683285559533
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.768223960596842, Std: 0.047953880519291885
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7784006953498479, Std: 0.04416124279376943
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7766912936404463, Std: 0.04576613730822456
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7749963783862089, Std: 0.054530981241664375
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7682022309140953, Std: 0.04319208698831717
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7783934521222656, Std: 0.04204812146687946
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7817832826307403, Std: 0.04218424962537316
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7767202665507751, Std: 0.04335615006744159
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7800811241489207, Std: 0.046032871665074825
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7716137911053166, Std: 0.0412664601862062
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=14, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.7724612487324352, Std: 0.04101103943600163
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=15, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.777545994495147, Std: 0.048147481039191115
+Use node label as node features
+Namespace(dataname='DD', cuda=0, depth=15, rate=0.4, ring_width=16, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='78.61+-4.3', alpha=0.5, layer=3)
+Acc: 0.777545994495147, Std: 0.0475652315564154

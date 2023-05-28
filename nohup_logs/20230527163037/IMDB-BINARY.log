@@ -1,0 +1,54 @@
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=1, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.732, Std: 0.0497594212184989
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=1, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.717, Std: 0.05441507144165115
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=2, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.698, Std: 0.05325410782277738
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=2, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.722, Std: 0.05929586832149436
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=2, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.714, Std: 0.061024585209569424
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=3, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.7350000000000001, Std: 0.05731491952362839
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=3, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.698, Std: 0.05325410782277738
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=3, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.722, Std: 0.05929586832149436
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=3, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.714, Std: 0.061024585209569424
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=4, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.7350000000000001, Std: 0.05731491952362839
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=4, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.7350000000000001, Std: 0.05731491952362839
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=4, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.698, Std: 0.05325410782277738
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=4, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.722, Std: 0.05929586832149436
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=4, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.714, Std: 0.061024585209569424
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=5, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.7350000000000001, Std: 0.05731491952362839
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=5, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.7350000000000001, Std: 0.05731491952362839
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=5, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.7350000000000001, Std: 0.05731491952362839
+Using degree as node features
+Namespace(dataname='IMDB-BINARY', cuda=3, depth=5, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=0.0005, acc='74.8+-4.7', alpha=0.2, layer=2)
+Acc: 0.698, Std: 0.05325410782277738

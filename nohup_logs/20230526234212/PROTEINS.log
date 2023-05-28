@@ -1,0 +1,6 @@
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=0, depth=1, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7474903474903475, Std: 0.04017624519336323
+Use node label as node features
+Namespace(dataname='PROTEINS', cuda=0, depth=1, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=1e-05, warmup=100.0, w=1e-05, acc='75.83+-2.1', alpha=0.5, layer=2)
+Acc: 0.7492599742599741, Std: 0.04398174788055497

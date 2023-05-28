@@ -1,0 +1,3 @@
+Use node label as node features
+Namespace(acc='80.97+-2.7', alpha=0.5, cuda=0, dataname='NCI1', depth=1, epochs=20, hidden=32, layer=3, lr=1e-05, out_hidden=64, rate=0.1, w=0.0001, warmup=100.0)
+Acc: 0.7946472019464721, Std: 0.019287514532950283

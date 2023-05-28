@@ -1,0 +1,4 @@
+Using degree as node features
+Namespace(acc='55.17+-8.4,0.7', alpha=0.5, cuda=0, dataname='REDDIT-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=0.001, out_hidden=64, rate=0.1, w=1e-05, warmup=100.0)
+Using degree as node features
+Namespace(acc='55.17+-8.4,0.7', alpha=0.5, cuda=0, dataname='REDDIT-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=0.001, out_hidden=64, rate=0.2, w=1e-05, warmup=100.0)
