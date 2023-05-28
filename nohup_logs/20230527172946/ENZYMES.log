@@ -1,0 +1,51 @@
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=1, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
+Acc: 0.5466666666666666, Std: 0.05153208277913435
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=1, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=2, w=1e-05, warmup=100.0)
+Acc: 0.565, Std: 0.05449260908090605
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=2, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
+Acc: 0.5683333333333334, Std: 0.07833333333333332
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=2, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=2, w=1e-05, warmup=100.0)
+Acc: 0.5666666666666667, Std: 0.06324555320336757
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=2, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=3, w=1e-05, warmup=100.0)
+Acc: 0.5583333333333333, Std: 0.05387743291748205
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=3, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
+Acc: 0.5633333333333334, Std: 0.07295356209413097
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=3, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=2, w=1e-05, warmup=100.0)
+Acc: 0.5566666666666666, Std: 0.04422166387140531
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=3, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=3, w=1e-05, warmup=100.0)
+Acc: 0.5666666666666667, Std: 0.06497862896539308
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=3, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=4, w=1e-05, warmup=100.0)
+Acc: 0.5633333333333334, Std: 0.05467073155618909
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=4, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
+Acc: 0.575, Std: 0.05283622494715785
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=4, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=2, w=1e-05, warmup=100.0)
+Acc: 0.5733333333333334, Std: 0.070789201938651
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=4, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=3, w=1e-05, warmup=100.0)
+Acc: 0.5633333333333332, Std: 0.052068331172711035
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=4, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=4, w=1e-05, warmup=100.0)
+Acc: 0.5650000000000001, Std: 0.06849574196011504
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=4, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=5, w=1e-05, warmup=100.0)
+Acc: 0.5433333333333333, Std: 0.05487359211051443
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=5, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
+Acc: 0.58, Std: 0.047022453265552946
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=5, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=2, w=1e-05, warmup=100.0)
+Acc: 0.5466666666666666, Std: 0.06046119049072351
+Use node label as node features
+Namespace(alpha=0.8, cuda=0, dataname='ENZYMES', depth=5, epochs=100, hidden=512, layer=2, lr=0.0001, out_hidden=64, rate=0.1, ring_width=3, w=1e-05, warmup=100.0)
+Acc: 0.5650000000000001, Std: 0.06890008869531461

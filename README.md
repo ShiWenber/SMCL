@@ -37,6 +37,20 @@ awk '{sub(/\r$/,"")};1' run.sh > run2.sh
 mv run2.sh run.sh
 ```
 
+查看日志总结 How to check the log summary
+
+```bash
+python summary_logs.py nohups/20230527* # summary the logs created in 20230527
+```
+
+```bash
+python summary_logs.py nohup_logs/20230527172946/  # summary the logs in the folder
+```
+
+```bash
+python summary_logs.py nohup_logs/20230527172946/ nohup_logs/20230526172946/  # summary the logs in the folders
+```
+
 ## 两种遮盖实现 Two masking implementations
 
 我们有两种遮盖实现，一种采用了将 dgl.graph 的 adj_matrix 稀疏矩阵转化为一般矩阵的，然后利用矩阵运算找邻居的方式，我们用mask表示，另一种采用了递归的方式找邻居，我们用 mask_right 表示（命名的来源是因为一个 mask_right 是我们最先实现的，用来作为测试基准判断 mask 的正确性） We implemented two masking methods, one is to convert the adj_matrix of dgl.graph into a general matrix, and then use matrix operations to find neighbors, we use mask to represent. The other is to use recursion to find neighbors, we use mask_right to represent (the name comes from the fact that mask_right is the first one we implemented to be used as a test benchmark to judge the correctness of mask)
