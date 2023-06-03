@@ -1,8 +1,0 @@
-Using degree as node features
-Namespace(acc='55.17+-8.4,0.7', alpha=0.5, cuda=0, dataname='REDDIT-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=0.001, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
-Acc: 0.8685, Std: 0.025104780421266425
-Using degree as node features
-Namespace(acc='55.17+-8.4,0.7', alpha=0.5, cuda=0, dataname='REDDIT-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=0.001, out_hidden=64, rate=0.2, ring_width=1, w=1e-05, warmup=100.0)
-Acc: 0.8310000000000001, Std: 0.024979991993593548
-Using degree as node features
-Namespace(acc='55.17+-8.4,0.7', alpha=0.5, cuda=0, dataname='REDDIT-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=0.001, out_hidden=64, rate=0.3, ring_width=1, w=1e-05, warmup=100.0)

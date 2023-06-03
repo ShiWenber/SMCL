@@ -49,3 +49,84 @@ Acc: 0.5395022044088176, Std: 0.023624656451092744
 Using degree as node features
 Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=5, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
 Acc: 0.5413034068136272, Std: 0.024079961239900836
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=5, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5283006012024047, Std: 0.019057271116592653
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=5, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5427042084168338, Std: 0.01690643410380702
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=5, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5298993987975951, Std: 0.019373424126138263
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=6, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5493054108216433, Std: 0.022999324791124338
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=6, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.545308617234469, Std: 0.01864325693198513
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=6, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5438993987975952, Std: 0.02251547014917897
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=6, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5365038076152304, Std: 0.02024146397739889
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=6, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5245010020040081, Std: 0.02138716743469775
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=6, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.538503006012024, Std: 0.021737267509046393
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=6, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5385070140280563, Std: 0.019406219224076423
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5505054108216433, Std: 0.018857252049958983
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5423022044088176, Std: 0.023500469096228268
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5359066132264529, Std: 0.022046587874304933
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5391018036072145, Std: 0.021004319844324465
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5367070140280562, Std: 0.02075539917886224
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5299002004008015, Std: 0.021299728101436224
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5281002004008017, Std: 0.022380329279034245
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=7, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5289022044088176, Std: 0.02458477426984216
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5393022044088176, Std: 0.024752480162514738
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5519050100200401, Std: 0.022649959974016518
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5433030060120241, Std: 0.019489482831630323
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5433098196392786, Std: 0.017126669603738348
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5413066132264529, Std: 0.01987713797441066
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5303022044088176, Std: 0.020618558474209653
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.523498997995992, Std: 0.02457452183186003
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5381058116232464, Std: 0.021605196884814448
+Using degree as node features
+Namespace(dataname='REDDIT-MULTI-5K', cuda=3, depth=8, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=100, lr=0.001, warmup=100.0, w=1e-05, acc='55.17+-8.4,0.7', alpha=0.5, layer=2)
+Acc: 0.5329018036072145, Std: 0.021279187410522545

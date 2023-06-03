@@ -49,3 +49,84 @@ Acc: 0.5433333333333332, Std: 0.06506407098647711
 Use node label as node features
 Namespace(dataname='ENZYMES', cuda=3, depth=5, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
 Acc: 0.5650000000000001, Std: 0.0668539037337719
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=5, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5499999999999999, Std: 0.0649786289653931
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=5, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5766666666666667, Std: 0.052281290471193745
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=5, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.54, Std: 0.04898979485566356
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=6, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.555, Std: 0.05377421934967224
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=6, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5433333333333333, Std: 0.0687992248018343
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=6, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5566666666666666, Std: 0.056862407030773256
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=6, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5466666666666666, Std: 0.058118652580542315
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=6, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5466666666666666, Std: 0.05153208277913436
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=6, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5516666666666666, Std: 0.05398044913567216
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=6, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5466666666666666, Std: 0.0604611904907235
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5583333333333333, Std: 0.08308295720409677
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5666666666666667, Std: 0.05868938953886336
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5683333333333334, Std: 0.05550275268448902
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5700000000000001, Std: 0.06091888960832354
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5566666666666666, Std: 0.04027681991198191
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5666666666666667, Std: 0.04013864859597432
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5533333333333333, Std: 0.061824123303304675
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=7, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5366666666666667, Std: 0.07483314773547879
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5599999999999999, Std: 0.05280993172584953
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5750000000000001, Std: 0.047287536530370336
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5533333333333333, Std: 0.06403124237432849
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.545, Std: 0.06710274046399133
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5466666666666666, Std: 0.06616477747093068
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5549999999999999, Std: 0.06326750965367435
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5433333333333333, Std: 0.06289320754704403
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5566666666666666, Std: 0.046666666666666655
+Use node label as node features
+Namespace(dataname='ENZYMES', cuda=3, depth=8, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=100, lr=0.0001, warmup=100.0, w=1e-05, alpha=0.8, layer=2)
+Acc: 0.5516666666666666, Std: 0.04437842318564782

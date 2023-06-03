@@ -1,9 +1,0 @@
-Using degree as node features
-Namespace(acc='74.8+-4.7', alpha=0.2, cuda=0, dataname='IMDB-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=1e-05, out_hidden=64, rate=0.1, ring_width=1, w=0.0005, warmup=100.0)
-Acc: 0.7220000000000001, Std: 0.043081318457076016
-Using degree as node features
-Namespace(acc='74.8+-4.7', alpha=0.2, cuda=0, dataname='IMDB-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=1e-05, out_hidden=64, rate=0.2, ring_width=1, w=0.0005, warmup=100.0)
-Acc: 0.719, Std: 0.04459820624195549
-Using degree as node features
-Namespace(acc='74.8+-4.7', alpha=0.2, cuda=0, dataname='IMDB-BINARY', depth=1, epochs=100, hidden=32, layer=2, lr=1e-05, out_hidden=64, rate=0.3, ring_width=1, w=0.0005, warmup=100.0)
-Acc: 0.717, Std: 0.04026164427839475

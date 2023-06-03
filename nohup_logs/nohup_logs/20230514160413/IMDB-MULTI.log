@@ -1,8 +1,0 @@
-seed: 1684082037
-Using degree as node features
-Namespace(acc='50.8+-1.65', agg='Max', alpha=0.5, cuda=0, dataname='IMDB-MULTI', depth=1, epochs=200, hidden=32, layer=1, lr=1e-05, out_hidden=64, rate=0.1, w=1e-05, warmup=100.0)
-Acc: 0.5026666666666666, Std: 0.036660605559646724
-seed: 1684099321
-Using degree as node features
-Namespace(acc='50.8+-1.65', agg='Max', alpha=0.5, cuda=0, dataname='IMDB-MULTI', depth=1, epochs=200, hidden=32, layer=1, lr=1e-05, out_hidden=64, rate=0.2, w=1e-05, warmup=100.0)
-Acc: 0.5073333333333334, Std: 0.0500177746184072

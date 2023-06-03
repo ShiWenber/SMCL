@@ -1,0 +1,407 @@
+Downloading /home/ynukg/.dgl/PTC_MR.zip from https://www.chrsmrrs.com/graphkerneldatasets/PTC_MR.zip...
+Extracting file to /home/ynukg/.dgl/PTC_MR
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=1, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5786554621848738, Std: 0.044880873163675235
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=1, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5726890756302521, Std: 0.04787740918521826
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=2, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5698319327731092, Std: 0.03969990173268591
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=2, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5816806722689076, Std: 0.059555825958684125
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=2, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5608403361344537, Std: 0.047128100268297106
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=3, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5726890756302521, Std: 0.045716525525949805
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=3, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5524369747899159, Std: 0.052080776836252396
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=3, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5756302521008403, Std: 0.047838676246210673
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=3, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.578655462184874, Std: 0.046664312724568786
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=4, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5700000000000001, Std: 0.043460979270585384
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=4, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.561344537815126, Std: 0.043824959490673304
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=4, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5784873949579832, Std: 0.05949223746643592
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=4, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5699159663865545, Std: 0.0561201108833701
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=4, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5927731092436975, Std: 0.05392732334965212
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=5, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5726890756302521, Std: 0.04767343244709831
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=5, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5670588235294117, Std: 0.04696238617977205
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=5, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5757142857142856, Std: 0.03705386883549777
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=5, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5874789915966387, Std: 0.0488313391402062
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=5, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5667226890756302, Std: 0.06083035342215981
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=5, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5841176470588236, Std: 0.06168027156236476
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=6, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.578655462184874, Std: 0.053750253520783324
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=6, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5728571428571427, Std: 0.03616190085199191
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=6, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5641176470588235, Std: 0.05869740380041262
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=6, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5584873949579832, Std: 0.050983131640619676
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=6, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5872268907563025, Std: 0.06637783157242155
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=6, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5610084033613445, Std: 0.039585451616249795
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=6, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5694117647058824, Std: 0.06515851725289103
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5781512605042017, Std: 0.06072090045674045
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5612605042016806, Std: 0.03451613541903608
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.563781512605042, Std: 0.04216352534897698
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5756302521008403, Std: 0.04429456324138284
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5583193277310924, Std: 0.04378498026558385
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5730252100840335, Std: 0.06103114375823766
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5665546218487394, Std: 0.06533449969583381
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=7, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5869747899159664, Std: 0.07413865248564708
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5959663865546219, Std: 0.05790739168955264
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.566890756302521, Std: 0.03906650295498487
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5761344537815125, Std: 0.06085472692982953
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5842016806722687, Std: 0.05853205095185669
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5611764705882353, Std: 0.045768319524529505
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5494117647058824, Std: 0.04642703142052202
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5758823529411764, Std: 0.05735508045383821
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5522689075630252, Std: 0.03947040127482142
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=8, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5665546218487395, Std: 0.06460299579651999
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5667226890756302, Std: 0.061606669136422224
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5871428571428572, Std: 0.04262592099412535
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5757142857142856, Std: 0.039689227755176526
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5847058823529412, Std: 0.049781387774399645
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5695798319327731, Std: 0.05256072447926748
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5669747899159663, Std: 0.04768646570431965
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5584873949579832, Std: 0.055841837843621046
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5930252100840336, Std: 0.04648365491678458
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5552100840336134, Std: 0.04494824366348043
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=9, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5871428571428571, Std: 0.0607523506042973
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5639495798319327, Std: 0.04015619880215934
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5869747899159663, Std: 0.04228193661232898
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5752941176470587, Std: 0.0274397736228014
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5611764705882353, Std: 0.05873318392170616
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5642857142857143, Std: 0.04846816681791918
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5810084033613444, Std: 0.056250069635654314
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5640336134453781, Std: 0.04718889586786154
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5636974789915966, Std: 0.06168410678963994
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5958823529411765, Std: 0.04615496016067062
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5636974789915966, Std: 0.059307492917778606
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=10, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5695798319327731, Std: 0.07313029736455091
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.6018487394957983, Std: 0.060731133715406574
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5815126050420167, Std: 0.05545072456080444
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5610924369747898, Std: 0.0392231785559966
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5726890756302521, Std: 0.058941358579078576
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5611764705882353, Std: 0.05251233541835302
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5788235294117647, Std: 0.04339390348197066
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5553781512605042, Std: 0.041048420342986086
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5641176470588235, Std: 0.042576192310776265
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5642016806722688, Std: 0.047270233408109714
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5640336134453781, Std: 0.052400601476475364
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5724369747899158, Std: 0.05641754211214923
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=11, rate=0.1, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5666386554621848, Std: 0.050670317840833555
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5783193277310923, Std: 0.0387208070270923
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.587310924369748, Std: 0.036695757676502364
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5843697478991595, Std: 0.05975516744784984
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5726890756302521, Std: 0.04848419079752856
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5639495798319327, Std: 0.04271429480704246
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5580672268907563, Std: 0.038531863048953445
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5757983193277311, Std: 0.0426851053536515
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5752941176470587, Std: 0.052264854337697654
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5639495798319327, Std: 0.04780242332485996
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5610924369747898, Std: 0.03628666398156231
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5729411764705883, Std: 0.05421281886730182
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5552100840336134, Std: 0.04494824366348043
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=12, rate=0.1, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5694957983193277, Std: 0.06071979562681183
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5816806722689075, Std: 0.048051945622879844
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5697478991596638, Std: 0.05307705651592681
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5815126050420167, Std: 0.04752321878519967
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5784873949579832, Std: 0.0533599549875321
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5815126050420167, Std: 0.0438426805403213
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5872268907563025, Std: 0.04001588555403922
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.555126050420168, Std: 0.03721693058705769
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5759663865546217, Std: 0.04822123766727363
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5695798319327731, Std: 0.04767424713006091
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5641176470588235, Std: 0.04838913481405826
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.578235294117647, Std: 0.04683537888395618
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5900840336134454, Std: 0.045757517867045766
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5610084033613445, Std: 0.047529459308452086
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=13, rate=0.1, ring_width=14, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5726050420168067, Std: 0.06128257489939863
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5873949579831932, Std: 0.052569053654796444
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5963865546218488, Std: 0.05376844641699021
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5903361344537815, Std: 0.04354246908409875
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5816806722689075, Std: 0.05768502069758187
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5756302521008403, Std: 0.055895935671592296
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5757142857142856, Std: 0.057152063025135806
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5666386554621848, Std: 0.04207902955724653
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5580672268907563, Std: 0.038531863048953445
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5788235294117647, Std: 0.04339390348197066
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5581512605042016, Std: 0.038038184331921805
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5697478991596638, Std: 0.04418282500339585
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5752941176470587, Std: 0.050582651357139394
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5758823529411765, Std: 0.05876113137090455
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=14, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5580672268907563, Std: 0.04847428568981177
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=14, rate=0.1, ring_width=15, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5609243697478992, Std: 0.04823448891079744
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5930252100840335, Std: 0.042139400982637173
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=2, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5815966386554621, Std: 0.05918908025338322
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=3, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5876470588235294, Std: 0.04589658719701929
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=4, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.593109243697479, Std: 0.043869731601094475
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=5, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5812605042016806, Std: 0.04961407448759664
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=6, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5873109243697477, Std: 0.06200228702065159
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=7, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5756302521008403, Std: 0.05000529595567006
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=8, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5842016806722687, Std: 0.042001341691725654
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=9, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5609243697478992, Std: 0.03616619672774004
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=10, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5730252100840335, Std: 0.046453869680929114
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=11, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5581512605042016, Std: 0.038038184331921805
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=12, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5699159663865545, Std: 0.04424798673615185
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=13, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5583193277310924, Std: 0.04955447293359961
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=14, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5989075630252101, Std: 0.04528008388631411
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=15, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5724369747899158, Std: 0.060603093785247295
+Use node label as node features
+Namespace(dataname='PTC_MR', cuda=0, depth=15, rate=0.1, ring_width=16, out_hidden=64, hidden=512, epochs=50, lr=0.0001, warmup=100.0, w=1e-05, acc='67.1+-8.7', alpha=0.2, layer=2, featdim=18)
+Acc: 0.5900000000000001, Std: 0.06715905190626383
