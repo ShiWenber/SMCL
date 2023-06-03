@@ -1,0 +1,2 @@
+Using degree as node features
+Namespace(dataname='COLLAB', cuda=0, depth=1, rate=0.1, ring_width=1, out_hidden=64, hidden=512, epochs=50, lr=1e-05, warmup=100.0, w=1e-05, acc='78.8+-1.5', alpha=0.6, layer=2, agg='Max')
