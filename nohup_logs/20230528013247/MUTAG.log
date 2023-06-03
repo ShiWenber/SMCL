@@ -1,3 +1,0 @@
-Use node label as node features
-Namespace(acc='90.50+-8.4', alpha=0.3, cuda=0, dataname='MUTAG', depth=1, epochs=500, hidden=512, layer=1, lr=0.001, out_hidden=64, rate=0.1, ring_width=1, w=1e-05, warmup=100.0)
-Acc: 0.8885964912280702, Std: 0.08283115335307992
