@@ -1,3 +1,19 @@
+# SMCL
+
+## ACC
+
+model_name: SMCL
+
+| Dataset | ENZYMES   | PTC-MR | NCI109 | NCI1      | MUTAG     | PROTEINS  | DD       |
+| ------- | --------- | ------ | ------ | --------- | --------- | --------- | -------- |
+| acc     | **58.00** | 60.2   | 79.40  | **81.05** | **89.91** | **75.47** | **78.6** |
+
+
+| Dataset | IMDB-B | IMDB-M | COLLAB | REDDIT-B  | REDDIT-M-5K |
+| ------- | ------ | ------ | ------ | --------- | ----------- |
+| acc     | 73.50  | 50.53  | 78.52  | **90.15** | 55.19       |
+
+
 ## Usage
 
 You can use the following command, and the parameters are given
