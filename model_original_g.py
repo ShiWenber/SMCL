@@ -1,3 +1,4 @@
+import random
 import torch
 from functools import partial
 import torch.nn as nn
@@ -39,10 +40,10 @@ def sce_loss(x, y, alpha=3):
     loss = loss.mean()
     return loss
 
-# 多重递归获得邻居节点
+
 # @functools.lru_cache(maxsize=16)
 def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_matrix:torch.Tensor=None):
-    """多重递归获得邻居节点集合张量（逻辑上是集合，物理数据结构为torch.Tensor），且去重
+    """获得邻居节点集合张量（逻辑上是集合，物理数据结构为torch.Tensor），且去重
     Args:
         graph (dgl.DGLGraph): 输入图
         nodes (torch.Tensor): 中心节点集合张量，1*nodes_num
@@ -52,7 +53,7 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_mat
         torch.Tensor: 每层外扩获得的邻居节点组成的无重复节点张量, depth*neighbors_num，0位置是第一层的邻居，1位置是第二层的邻居，以此类推
     """
     if adj_matrix == None:
-        adj_matrix = graph.adjacency_matrix().to_dense().to(nodes.device)
+        adj_matrix = graph.adjacency_matrix().to(nodes.device)
     if depth < 0:
         return torch.Tensor([]).to(nodes.device)
     if depth == 0:
@@ -61,17 +62,19 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_mat
         level_neighbors = [] # 用于存储每一层的邻居
         level_neighbors.append(nodes) # 用level_neighbors[0]存储中心点
         one_hot_central_nodes = torch.eye(adj_matrix.shape[0]).to(nodes.device)[nodes]
-        current_mat = one_hot_central_nodes @ adj_matrix
+        # current_mat = one_hot_central_nodes @ adj_matrix
+        current_mat = torch.sparse.mm(adj_matrix, one_hot_central_nodes.T)
         current_neighbors = (current_mat).nonzero()
-        neighbors = current_neighbors[:,1]
+        # print('current_neighbors: ', current_neighbors)
+        neighbors = current_neighbors[:,0]
         neighbors = torch.cat((neighbors, level_neighbors[0]), dim=0)
         neighbors = torch.unique(neighbors)
         # neighbors = torch.unique(neighbors)
         level_neighbors.append(neighbors)
         for i in range(2, depth + 1):
-            current_mat = current_mat @ adj_matrix
+            current_mat = torch.sparse.mm(adj_matrix, current_mat)
             current_neighbors = current_mat.nonzero()
-            neighbors = current_neighbors[:,1]
+            neighbors = current_neighbors[:,0]
             neighbors = torch.cat((neighbors, level_neighbors[i - 1]), dim=0)
             neighbors = torch.unique(neighbors)
             # neighbors = torch.masked_select(neighbors, torch.logical_not(torch.isin(neighbors, level_neighbors[i - 1])))
@@ -80,7 +83,6 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_mat
         # print("level_neighbors: ", level_neighbors)
         # print("central_nodes: ", nodes)
         return neighbors, level_neighbors
-
 
 def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_nodes=None):
     """遮盖子图，返回遮盖节点集合和中心节点集合
@@ -108,18 +110,42 @@ def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_nodes=N
         x (torch.Tensor): 特征张量
         num (int): 随机遮盖的子图数量（中心点数量）
         depth (int, optional): 遮盖节点的邻居深度. Defaults to 1.
-        central_nodes (torch.Tensor, optional): 中心节点集合张量，当为None时随机取一个，1*nodes_num. Defaults to None.
+        num_ring (int): batch中遮盖的环形的数量. Defaults to 1. 范围为[0, batch_size]
     Returns:
         torch.Tensor: mask_nodes, 遮盖节点集合
         torch.Tensor: central_nodes, 中心节点集合，可以去除，仅用在需要查看中心节点特征的情况下，猜测当gcn层数为3时，递归深度低于3就可能导致中心节点特征丢失 todo
     """
+    print('masked_ring_num:',num)
     assert 1 <= ring_width <= depth + 1, "ring_width must be in [1, depth + 1]"
+    assert num >= 0 and num <= g.batch_size, "num_ring must be in [0, batch_size]"
     num_nodes = g.num_nodes()
-    adj_matrix = g.adjacency_matrix().to_dense().to(x.device)
+    adj_matrix = g.adjacency_matrix().to(x.device)
 
-    if central_nodes == None:
+
+    central_nodes = None
+    if num == 0:
+        return torch.Tensor([]).to(x.device), torch.Tensor([]).to(x.device)
+    elif num == 1:
         perm = torch.randperm(num_nodes, device=x.device)
-        central_nodes = perm[: num]
+        central_nodes = perm[: 1]   
+    else:
+        batch_num_nodes = g.batch_num_nodes() # batch_size * 1 的张量，每个元素是batch中一个小图的节点数
+    
+        # 生成一个idx，用于索引batched graph中的节点
+        idx = torch.zeros(len(batch_num_nodes) + 1, dtype=torch.int64)
+        for i in range(1, len(batch_num_nodes) + 1):
+            idx[i] = idx[i - 1] + batch_num_nodes[i - 1]
+        random_idx = torch.zeros(len(batch_num_nodes), dtype=torch.int64)
+        for i in range(0, len(idx) - 1):
+            # print(idx[i], idx[i + 1])
+            # 生成一个 batch_num_nodes[i] - batch_num_nodes[i + 1] 之间的随机数
+            random_idx[i] = random.randint(idx[i], idx[i + 1] - 1)
+
+        # 从random_idx中随机选取num个中心点
+        central_nodes = random_idx[torch.randperm(len(random_idx), device=x.device)[: num]]
+        # print('central_nodes:',central_nodes.shape)
+        # print('central_nodes:',central_nodes)
+    
 
     # print(central_nodes.device)
     assert type(central_nodes) == torch.Tensor
@@ -140,13 +166,17 @@ def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_nodes=N
     else:
         not_mask_nodes = torch.Tensor([]).to(x.device) 
 
+
+
+    # not_mask_nodes = get_all_neighbors(g, central_nodes,depth - ring_width, adj_matrix)
+    # not_mask_nodes = torch.cat((central_nodes, not_mask_nodes), dim=0)
+    # not_mask_nodes = torch.unique(not_mask_nodes)
+
     # 环形应遮盖节点集合，有于torch的集合操作，返回的mask_nodes一定是无重复的
     # mask_nodes = torch.masked_select(mask_nodes_out, torch.isin(mask_nodes_out, not_mask_nodes))
     mask_nodes = torch.masked_select(mask_nodes_out, torch.logical_not(torch.isin(mask_nodes_out, not_mask_nodes)))
 
     return mask_nodes, central_nodes
-
-
 
 
 
@@ -278,11 +308,9 @@ class CG(nn.Module):
             param_k.data.mul_(mm).add_(param_q.data, alpha=1. - mm)
 
     def forward(self, graph, feat):
-        # nodes_num = self.rate * graph.num_nodes()
-        nodes_num=1
-        # assert type(nodes_num) == float
-        # 将nodes_num转为int
-        mask_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
+        # 将num_ring转为int
+        num_ring = int(self.rate * graph.batch_size)
+        mask_nodes, central_nodes = mask(graph, feat, num_ring, self.depth, self.ring_width)
         # # print('mask_nodes:',mask_nodes)
         masked_graph_feat = feat.clone()
         # print('mask_nodes:',mask_nodes)
@@ -291,8 +319,11 @@ class CG(nn.Module):
         # # print('sub_graph:',sub_graph)
         # sub_graph_feat=feat[mask_nodes]
         # # print('sub_graph:',sub_graph)
-        masked_graph_feat[mask_nodes] = 0.0
-        masked_graph_feat[mask_nodes] += self.enc_mask_token
+        if mask_nodes.shape[0] == 0:
+            pass
+        else:
+            masked_graph_feat[mask_nodes] = 0.0
+            masked_graph_feat[mask_nodes] += self.enc_mask_token
 
         h1,_ = self.online_encoder(graph, masked_graph_feat)
         with torch.no_grad():

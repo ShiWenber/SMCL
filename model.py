@@ -293,15 +293,23 @@ class CG(nn.Module):
         nodes_num=1
         # assert type(nodes_num) == float
         # 将nodes_num转为int
-        mask_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
+        ring_nodes, central_nodes = mask(graph, feat, nodes_num, self.depth, self.ring_width)
         # # print('mask_nodes:',mask_nodes)
         remainder_graph_feat = feat.clone()
         # print('mask_nodes:',mask_nodes)
-        sub_graph=graph.subgraph(mask_nodes)
+        sub_graph=graph.subgraph(ring_nodes)
         # print('sub_graph:',sub_graph)
         # # print('sub_graph:',sub_graph)
-        sub_graph_feat=feat[mask_nodes]
+        sub_graph_feat=feat[ring_nodes]
         # # print('sub_graph:',sub_graph)
+
+        # 环状遮盖，环状重建
+        # mask_nodes = ring_nodes
+        # remainder_graph_feat[mask_nodes] = 0.0
+        # remainder_graph_feat[mask_nodes] += self.enc_mask_token
+
+        # 环状遮盖，子图重建
+        mask_nodes = torch.cat((ring_nodes, central_nodes), dim=0)
         remainder_graph_feat[mask_nodes] = 0.0
         remainder_graph_feat[mask_nodes] += self.enc_mask_token
 

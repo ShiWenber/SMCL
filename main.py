@@ -111,6 +111,9 @@ def train():
     mm_scheduler = CosineDecayScheduler(1 - 0.99, 0, args.epochs)
     for epoch in range(1, args.epochs + 1):
         model.train()
+        cnt=0
+        for i in range(256):
+            cnt+=1
         # update momentum
         mm = 1 - mm_scheduler.get(epoch - 1)
         # mm = 0.99
