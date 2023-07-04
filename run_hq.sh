@@ -25,7 +25,7 @@
 # python main.py --cuda $CUDA_IDX --dataname REDDIT-MULTI-5K > nohup_logs/${time_str}/REDDIT-MULTI-5K.log;
 
 
-CUDA_IDX=3;
+CUDA_IDX=0;
 time_str=`date +%Y%m%d%H%M%S`
 mkdir nohup_logs/${time_str}
 python main.py --cuda $CUDA_IDX --dataname MUTAG > nohup_logs/${time_str}/MUTAG.log; # done
