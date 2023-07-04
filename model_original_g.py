@@ -55,9 +55,9 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_mat
     if adj_matrix == None:
         adj_matrix = graph.adjacency_matrix().to(nodes.device)
     if depth < 0:
-        return torch.Tensor([]).to(nodes.device), torch.Tensor([]).to(nodes.device)
+        return torch.Tensor([]).to(nodes.device), []
     if depth == 0:
-        return nodes, torch.Tensor([]).to(nodes.device)
+        return nodes, []
     else:
         level_neighbors = [] # 用于存储每一层的邻居
         level_neighbors.append(nodes) # 用level_neighbors[0]存储中心点
