@@ -1,3 +1,4 @@
+import ast
 import torch
 from torch.optim import Adam
 from dgl.dataloading import GraphDataLoader
@@ -21,8 +22,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 import time
+from hyperopt import fmin, tpe, hp, STATUS_OK, STATUS_FAIL, Trials
+import hyperopt.pyll.stochastic
 
 warnings.filterwarnings('ignore')
+
 
 def load_best_configs(args, path):
     with open(path, "r") as f:
@@ -64,6 +68,7 @@ def collate_fn(batch):
     labels = torch.cat(labels, dim=0)
     return batch_g, labels
 
+
 # 用time 获得随机数种子
 # seed = int(time.time())
 seed = int(33302)
@@ -74,8 +79,9 @@ parser = argparse.ArgumentParser(description="GraphOP")
 parser.add_argument("--dataname", type=str, default="MUTAG")
 parser.add_argument("--cuda", type=int, default=0)
 args = parser.add_argument("--depth", type=int, default=1)
-args = parser.add_argument("--rate", type=float, default=0.1)
+args = parser.add_argument("--rate", type=float, default=0.1, help="ring mask rate must be in [1/batch_size, 1]") # 当batch_size 256 的时候需要设置最小至少为0.004
 args = parser.add_argument("--ring_width", type=int, default=1)
+args = parser.add_argument("--contrast_with_central_nodes", type=int, default=0)
 
 args = parser.parse_args()
 args = load_best_configs(args, "config.yaml")
@@ -84,36 +90,45 @@ dataname = args.dataname
 # 环带宽度，取值范围为 1 ~ depth + 1
 assert args.ring_width <= args.depth + 1 and args.ring_width >= 1, "ring_width must be in [1, depth + 1]"
 
-
 graphs, (n_feat, num_classes) = load_graph_classification_dataset(dataname)
 train_idx = torch.arange(len(graphs))
 batch_size = 256
 train_sampler = SubsetRandomSampler(train_idx)
 train_loader = GraphDataLoader(graphs, collate_fn=collate_fn,
-                               batch_size=batch_size, shuffle=True)
+                               batch_size=batch_size,  shuffle=True)
 eval_loader = GraphDataLoader(graphs, collate_fn=collate_fn, batch_size=batch_size,
                               shuffle=True)
 
 device = torch.device(f'cuda:{args.cuda}' if torch.cuda.is_available() else 'cpu')
 
-print(f"{args}")
-def train():
+print(f"init-{args}")
+
+def train(args):
+    if type(args) == dict:
+        args = argparse.Namespace(**args)
+    if not(1 <= args.ring_width and args.ring_width <= args.depth + 1):
+        return {"status": STATUS_FAIL}
+    if type(args.ring_width) != int:
+        args.ring_width = int(args.ring_width)
+    if type(args.hidden) != int:
+        args.hidden = int(args.hidden)
+    if type(args.epochs) != int:
+        args.epochs = int(args.epochs)
+    print(f"valid-{args}")
     seed_everything(seed)
     time_str = time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
-    log_file_name =  ''
+    log_file_name = ''
     for k, v in args.__dict__.items():
         log_file_name += f"{k}-{v}_"
     log_file_name = log_file_name[:-1]
     file = open(f"logs/{time_str}_{log_file_name}_seed-{seed}.csv", "w")
-    model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth, args.ring_width).to(device)
+    # model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth, args.ring_width).to(device)
+    model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth, args.ring_width, args.contrast_with_central_nodes).to(device)
     optimizer = Adam(model.trainable_parameters(), lr=args.lr, weight_decay=args.w)
     lr_scheduler = CosineDecayScheduler(args.lr, args.warmup, args.epochs)
     mm_scheduler = CosineDecayScheduler(1 - 0.99, 0, args.epochs)
     for epoch in range(1, args.epochs + 1):
         model.train()
-        cnt=0
-        for i in range(256):
-            cnt+=1
         # update momentum
         mm = 1 - mm_scheduler.get(epoch - 1)
         # mm = 0.99
@@ -131,7 +146,7 @@ def train():
             loss.backward()
             optimizer.step()
             model.update_target_network(mm)
-            
+
     x_list = []
     y_list = []
     model.eval()
@@ -185,8 +200,91 @@ def train():
     #     best_epoch = epoch
     #
     # print('avg_f1: {0:.2f}, f1_std: {1:.2f}\n'.format(best_acc, best_std))
+    return {'loss': -test_f1, 'status': STATUS_OK}
 
-train()
+
+# train(args)
+
+space = {
+    # 'dataname': hp.choice("dataname", ["MUTAG", "PROTEINS", "REDDIT-BINARY", "NCI1", "REDDIT-MULTI5K", "COLLAB", "DD", "ENZYMES", "PTC_MR", "NCI109"] ),
+    'dataname': args.dataname,
+    'depth': hp.randint('depth', 16+1),
+    # 'epochs': hp.choice('epochs', [100, 200, 300, 400]),
+    'epochs': hp.quniform('epochs', 0, 800+1, 20),
+    # 'epochs': hp.choice('epochs', [1, 2, 3]),
+    'rate': hp.quniform('rate', 0.004, 0.104, 0.004),
+    # 'cuda': hp.choice('cuda', [0, 1, 2, 3]),
+    'cuda': args.cuda,
+    'ring_width': hp.quniform('ring_width', 1, 16+1+1, 1),  # 要小于depth
+    # 'out_hidden': hp.choice('out_hidden', [64]),
+    # "out_hidden": 64,
+    # "out_hidden": hp.quniform('out_hidden', 1, 512+1, 1),
+    'hidden': hp.choice('hidden', [512]),
+    # "hidden": hp.quniform('hidden', 1, 512+1, 1),
+    'lr': hp.choice('lr', [1e-04, 1e-05, 1e-06]),
+    # 'warmup': hp.choice('warmup', [100.0]),
+    'warmup': hp.uniform('warmup', 0, 200.0),
+    'w': hp.choice('w', [1e-04, 1e-05, 1e-06]),
+    # 'alpha': hp.choice('alpha', [0.3]),
+    'alpha': hp.uniform('alpha', 0, 1),
+    'layer': hp.choice('layer', [1, 2, 3]),
+    'contrast_with_central_nodes': hp.choice('contrast_with_central_nodes', [0, 1])
+}
+
+trails = Trials()
+best = fmin(train, space, algo=tpe.suggest, max_evals=300, trials=trails)
+
+# 更新config.yaml文件，config.yaml文件中的参数是最优参数,示例如下
+"""
+MUTAG:
+  out_hidden: 64
+  # hidden: 32
+  hidden: 512
+  epochs: 500
+  lr: 1e-3
+  warmup: 100
+  w: 1e-5
+  acc: 90.50+-8.4
+  alpha: 0.3
+  layer: 1
+PROTEINS:
+  out_hidden: 64
+  # hidden: 32
+  hidden: 512
+  epochs: 100
+  lr: 1e-5
+  warmup: 100
+  w: 1e-5
+  acc: 75.83+-2.1
+  alpha: 0.5
+  layer: 2
+"""
+print(best)
+with open("config.yaml", "r") as f:
+    config = yaml.load(f, Loader=yaml.FullLoader)
+    print(type(best))
+    config[args.dataname] = best
+    config[args.dataname]['acc'] = -trails.best_trial['result']['loss']
+    # 输出最佳结果
+    # print(config[args.dataname])
+    # 保存回config.yaml文件
+    config = ast.literal_eval(str(config))
+    print(yaml.dump(config))
+    with open("config.yaml", "w") as f:
+        f.write(yaml.dump(config))
+        # print(yaml.dump(config))
+
+    
+    # config[args.dataname]['acc'] = trails.best_trial['result']['loss']
+
+
+    # config[args.dataname] = {}
+
+
+
+
+
+# print(best)
 
 # PTC = np.array([[65.6, 67.1, 64.4, 63, 62.2, 61.6, 62.7, 61.9, 61.3]])
 # NCI109 = np.array([[79.57, 79.7, 80.2, 79.1, 79.9, 79.7, 79.5, 79.4, 79.3]])

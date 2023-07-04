@@ -61,10 +61,18 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_mat
     else:
         level_neighbors = [] # 用于存储每一层的邻居
         level_neighbors.append(nodes) # 用level_neighbors[0]存储中心点
-        one_hot_central_nodes = torch.eye(adj_matrix.shape[0]).to(nodes.device)[nodes]
+        one_hot_central_nodes = torch.eye(adj_matrix.shape[0])[nodes]
+
+        # 因cuda内存不足，所以采用稀疏矩阵
+        sparse_one_hot_matrix = one_hot_central_nodes.to_sparse()
+        one_hot_central_nodes = sparse_one_hot_matrix.to(nodes.device)
         # current_mat = one_hot_central_nodes @ adj_matrix
-        current_mat = torch.sparse.mm(adj_matrix, one_hot_central_nodes.T)
-        current_neighbors = (current_mat).nonzero()
+        # current_mat = torch.sparse.mm(adj_matrix, one_hot_central_nodes.T)
+        
+        current_mat = torch.sparse.mm(adj_matrix, one_hot_central_nodes.t())
+        # 如果current_mat是两个稀疏矩阵相乘，那么current_mat.nonzero()报错
+        current_mat = current_mat.to_dense()
+        current_neighbors = current_mat.nonzero()
         # print('current_neighbors: ', current_neighbors)
         neighbors = current_neighbors[:,0]
         neighbors = torch.cat((neighbors, level_neighbors[0]), dim=0)
@@ -115,7 +123,7 @@ def mask(g:dgl.DGLGraph, x:torch.Tensor, num, depth, ring_width, central_nodes=N
         torch.Tensor: mask_nodes, 遮盖节点集合
         torch.Tensor: central_nodes, 中心节点集合，可以去除，仅用在需要查看中心节点特征的情况下，猜测当gcn层数为3时，递归深度低于3就可能导致中心节点特征丢失 todo
     """
-    print('masked_ring_num:',num)
+    # print('masked_ring_num:',num)
     assert 1 <= ring_width <= depth + 1, "ring_width must be in [1, depth + 1]"
     assert num >= 0 and num <= g.batch_size, "num_ring must be in [0, batch_size]"
     num_nodes = g.num_nodes()
@@ -249,7 +257,7 @@ class Encoder1(nn.Module):
 
 
 class CG(nn.Module):
-    def __init__(self, in_hidden, out_hidden, rate, hidden, alpha, layers, depth, ring_width):
+    def __init__(self, in_hidden, out_hidden, rate, hidden, alpha, layers, depth, ring_width, mask_central_nodes):
         super(CG, self).__init__()
         self.online_encoder = Encoder1(in_hidden, out_hidden, hidden, layers)
         self.target_encoder = Encoder1(in_hidden, out_hidden, hidden, layers)
@@ -260,6 +268,7 @@ class CG(nn.Module):
         self.ring_width = ring_width
         self.enc_mask_token = nn.Parameter(torch.zeros(1, in_hidden))
         self.criterion = self.setup_loss_fn("sce")
+        self.contrast_with_central_nodes = mask_central_nodes
 
         
         self.hidden = hidden
@@ -310,7 +319,10 @@ class CG(nn.Module):
     def forward(self, graph, feat):
         # 将num_ring转为int
         num_ring = int(self.rate * graph.batch_size)
-        mask_nodes, central_nodes = mask(graph, feat, num_ring, self.depth, self.ring_width)
+        # 如果num_ring为0，那么num_ring=1
+        if num_ring == 0:
+            num_ring = 1
+        ring_nodes, central_nodes = mask(graph, feat, num_ring, self.depth, self.ring_width)
         # # print('mask_nodes:',mask_nodes)
         masked_graph_feat = feat.clone()
         # print('mask_nodes:',mask_nodes)
@@ -319,8 +331,15 @@ class CG(nn.Module):
         # # print('sub_graph:',sub_graph)
         # sub_graph_feat=feat[mask_nodes]
         # # print('sub_graph:',sub_graph)
+        
+        # todo 这里遮蔽全图或者只遮蔽环可能效果不一致，可以尝试
+        # mask_nodes = torch.cat((ring_nodes, central_nodes), dim=0)
+        mask_nodes = ring_nodes
+
         if mask_nodes.shape[0] == 0:
+            # todo 这里没有异常处理，如果mask_nodes为空，会导致后面的代码报错
             pass
+            # return 
         else:
             masked_graph_feat[mask_nodes] = 0.0
             masked_graph_feat[mask_nodes] += self.enc_mask_token
@@ -336,9 +355,17 @@ class CG(nn.Module):
             #     # h2 = sub_graph_feat.repeat(1, self.hidden // sub_graph_feat.shape[1]) # 1 * 28
             # else:
             #     h2,_ = self.target_encoder(sub_graph, sub_graph_feat)
-
             h2,_ = self.target_encoder(graph, feat)
-            
+
+        # 对比节点集合
+        contrast_nodes = None
+        if (self.contrast_with_central_nodes):
+            # 对比学习的时候对比子图
+            contrast_nodes = torch.cat((ring_nodes, central_nodes), dim=0)
+        else:
+            # 对比学习的时候只对比环
+            contrast_nodes = ring_nodes
+
         # # print(h1[mask_nodes].size())
         # # print(h2.size())
         # # print(h1[mask_nodes].mean(dim=0).size())
@@ -351,7 +378,7 @@ class CG(nn.Module):
         # print('h1[mask_nodes].shape:',h1[mask_nodes].shape)
         # print('h2:',h2.shape)
         # print('h2.detach():',h2.detach())
-        loss = self.criterion(h1[mask_nodes], h2[mask_nodes].detach())
+        loss = self.criterion(h1[contrast_nodes], h2[contrast_nodes].detach())
         # loss = self.criterion(h1[mask_nodes], h2.detach())
         return loss
 
