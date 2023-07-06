@@ -1,3 +1,4 @@
+import sys
 import ast
 import torch
 from torch.optim import Adam
@@ -29,10 +30,15 @@ warnings.filterwarnings('ignore')
 
 
 def load_best_configs(args, path):
+    """
+    """
     with open(path, "r") as f:
         configs = yaml.load(f, yaml.FullLoader)
     configs = configs[args.dataname]
     for k, v in configs.items():
+        # 已经有的参数不覆盖，注意默认参数
+        if args.cmd_first and hasattr(args, k):
+            continue
         if "lr" in k or "w" in k:
             v = float(v)
         setattr(args, k, v)
@@ -76,15 +82,24 @@ seed_everything(seed)
 # print(f"seed: {seed}")
 parser = argparse.ArgumentParser(description="GraphOP")
 # parser.add_argument("--dataname", type=str, default="ENZYMES")
-parser.add_argument("--dataname", type=str, default="MUTAG")
+
+
+
+# 命令行参数是否优先
+args = parser.add_argument("--cmd_first", type=int, default=0, help="whether cmd args first")
 parser.add_argument("--cuda", type=int, default=0)
+parser.add_argument("--dataname", type=str, default="MUTAG")
 args = parser.add_argument("--depth", type=int, default=1)
 args = parser.add_argument("--rate", type=float, default=0.1, help="ring mask rate must be in [1/batch_size, 1]") # 当batch_size 256 的时候需要设置最小至少为0.004
 args = parser.add_argument("--ring_width", type=int, default=1)
 args = parser.add_argument("--contrast_with_central_nodes", type=int, default=0)
+args = parser.add_argument("--epochs", type=int, default=100)
+args = parser.add_argument("--loss_fn", type=str, default="sce")
 
 args = parser.parse_args()
+
 args = load_best_configs(args, "config.yaml")
+
 dataname = args.dataname
 
 # 环带宽度，取值范围为 1 ~ depth + 1
@@ -121,9 +136,14 @@ def train(args):
     for k, v in args.__dict__.items():
         log_file_name += f"{k}-{v}_"
     log_file_name = log_file_name[:-1]
-    file = open(f"logs/{time_str}_{log_file_name}_seed-{seed}.csv", "w")
+    file = open(f"logs/{dataname}_{time_str}.csv", "w")
+    file.write("epoch,loss\n")
+    file_config = open(f"logs/{dataname}_{time_str}.txt", "w")
+    file_config.write(f"{log_file_name}_seed-{seed}\n")
+    file_config.close()
+
     # model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth, args.ring_width).to(device)
-    model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth, args.ring_width, args.contrast_with_central_nodes).to(device)
+    model = CG(n_feat, args.hidden, args.rate, 32, args.alpha, args.layer, args.depth, args.ring_width, args.contrast_with_central_nodes, args.loss_fn).to(device)
     optimizer = Adam(model.trainable_parameters(), lr=args.lr, weight_decay=args.w)
     lr_scheduler = CosineDecayScheduler(args.lr, args.warmup, args.epochs)
     mm_scheduler = CosineDecayScheduler(1 - 0.99, 0, args.epochs)
@@ -203,7 +223,9 @@ def train(args):
     return {'loss': -test_f1, 'status': STATUS_OK}
 
 
-# train(args)
+train(args)
+
+sys.exit(0)
 
 space = {
     # 'dataname': hp.choice("dataname", ["MUTAG", "PROTEINS", "REDDIT-BINARY", "NCI1", "REDDIT-MULTI5K", "COLLAB", "DD", "ENZYMES", "PTC_MR", "NCI109"] ),

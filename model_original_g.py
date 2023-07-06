@@ -61,7 +61,34 @@ def get_all_neighbors(graph:dgl.DGLGraph, nodes:torch.Tensor, depth:int, adj_mat
     else:
         level_neighbors = [] # 用于存储每一层的邻居
         level_neighbors.append(nodes) # 用level_neighbors[0]存储中心点
-        one_hot_central_nodes = torch.eye(adj_matrix.shape[0])[nodes]
+
+        # 这可能导致现存不足
+        # one_hot_central_nodes = torch.eye(adj_matrix.shape[0])[nodes]
+        # 优化显存的版本
+        one_hot_central_nodes = torch.zeros((len(nodes), adj_matrix.shape[0]), dtype=torch.float32)
+        one_hot_central_nodes[:, nodes] = 1.0
+        
+        # <---
+        # # 创建一个稀疏的单位矩阵
+        # sparse_matrix = torch.sparse_coo_tensor(
+        #     indices=torch.stack([nodes, nodes]),
+        #     values=torch.ones_like(nodes),
+        #     size=(adj_matrix.shape[0], adj_matrix.shape[0])
+        # )
+
+        # # 将稀疏矩阵转换为稠密矩阵
+        # # dense_matrix = sparse_matrix.to_dense()
+        # one_hot_central_nodes = sparse_matrix.to_dense()
+
+        # 判断 one_hot_central_nodes 和 one_hot_central_nodes_valid 是否相等
+        # one_hot_central_nodes_valid = torch.eye(adj_matrix.shape[0])[nodes]
+        # def is_equal(one_hot_central_nodes, one_hot_central_nodes_valid):
+        #     if one_hot_central_nodes.shape != one_hot_central_nodes_valid.shape:
+        #         return False
+        #     else:
+        #         return (one_hot_central_nodes == one_hot_central_nodes_valid).all()
+        # assert is_equal(one_hot_central_nodes, one_hot_central_nodes_valid) == True, f"one_hot_central_nodes{one_hot_central_nodes}, one_hot_central_nodes_valid{one_hot_central_nodes_valid}"
+        # -->
 
         # 因cuda内存不足，所以采用稀疏矩阵
         sparse_one_hot_matrix = one_hot_central_nodes.to_sparse()
@@ -257,7 +284,7 @@ class Encoder1(nn.Module):
 
 
 class CG(nn.Module):
-    def __init__(self, in_hidden, out_hidden, rate, hidden, alpha, layers, depth, ring_width, mask_central_nodes):
+    def __init__(self, in_hidden, out_hidden, rate, hidden, alpha, layers, depth, ring_width, mask_central_nodes, loss_fn: str="sce"):
         super(CG, self).__init__()
         self.online_encoder = Encoder1(in_hidden, out_hidden, hidden, layers)
         self.target_encoder = Encoder1(in_hidden, out_hidden, hidden, layers)
@@ -267,7 +294,7 @@ class CG(nn.Module):
         self.depth = depth
         self.ring_width = ring_width
         self.enc_mask_token = nn.Parameter(torch.zeros(1, in_hidden))
-        self.criterion = self.setup_loss_fn("sce")
+        self.criterion = self.setup_loss_fn(loss_fn)
         self.contrast_with_central_nodes = mask_central_nodes
 
         

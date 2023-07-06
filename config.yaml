@@ -52,18 +52,18 @@ IMDB-MULTI:
   w: 1e-5
   warmup: 100
 MUTAG:
-  acc: 0.8988304093567251
-  alpha: 0.3910640958659447
+  acc: 0.8994152046783626
+  alpha: 0.17717860906319477
   contrast_with_central_nodes: 0
-  depth: 14
-  epochs: 600.0
-  hidden: 0
-  layer: 2
-  lr: 1
-  rate: 0.052000000000000005
-  ring_width: 13.0
-  w: 1
-  warmup: 94.70228541975433
+  depth: 5
+  epochs: 100
+  hidden: 512
+  layer: 1
+  lr: 1e-4
+  rate: 0.07200000000000001
+  ring_width: 2.0
+  w: 1e-06
+  warmup: 61.39677578223307
 NCI1:
   acc: 80.97+-2.7
   alpha: 0.5
@@ -80,7 +80,7 @@ NCI109:
   contrast_with_central_nodes: 1
   depth: 14
   epochs: 740.0
-  hidden: 0
+  hidden: 512
   layer: 2
   lr: 1
   rate: 0.036000000000000004
@@ -88,17 +88,18 @@ NCI109:
   w: 2
   warmup: 47.43640631891315
 PROTEINS:
-  acc: 0.7618886743886744
-  alpha: 0.6788831775870331
-  depth: 16
-  epochs: 280.0
+  acc: 0.7591457528957529
+  alpha: 0.8081696131783881
+  contrast_with_central_nodes: 1
+  depth: 9
+  epochs: 0
   hidden: 0
-  layer: 0
-  lr: 2
-  rate: 0.044
-  ring_width: 4.0
-  w: 2
-  warmup: 140.27490834202933
+  layer: 1
+  lr: 0
+  rate: 0.04
+  ring_width: 9.0
+  w: 1
+  warmup: 53.66052774577925
 PTC_MR:
   acc: 0.645546218487395
   alpha: 0.39552927771225105
